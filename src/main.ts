@@ -23,7 +23,7 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "conservatoir",
+        tag: "contrechamps",
         imageCoverURL: "https://images.unsplash.com/photo-1653460655240-14a4d7aeea4a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687",
         hours: [
           "10h 30",
@@ -56,7 +56,7 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "conservatoir",
+        tag: "eklekto",
         imageCoverURL: "https://images.unsplash.com/photo-1653460655240-14a4d7aeea4a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&h=687",
         hours: [
           "10h 30",
@@ -88,7 +88,7 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "conservatoir",
+        tag: "orchestre",
         imageCoverURL: "https://images.unsplash.com/photo-1653460655240-14a4d7aeea4a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300",
         hours: [
           "10h 30",
