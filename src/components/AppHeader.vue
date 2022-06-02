@@ -7,11 +7,11 @@
     <div class="l6t-g__coll-2-6 l6t-with_gutter l6t-with_row">
       <div class="l6t-g" >
         <div class="l6t-g__coll-3-6">
-          <a>Présentation</a>
-          <a>Programme</a>
+          <a href="#presentation">Présentation</a>
+          <a href="#programme">Programme</a>
         </div>
         <div class="l6t-g__coll-3-6">
-          <a>infos pratique et contacts</a>
+          <a href="#infos">infos pratique<br>et contacts</a>
         </div>
       </div>
     </div>
@@ -31,6 +31,8 @@ export default defineComponent({
 .v-app-header {
   a {
     display: block;
+    color: inherit;
+    text-decoration: none;
   }
 }
 </style>

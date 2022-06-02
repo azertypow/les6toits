@@ -34,7 +34,7 @@
     </section>
 
     <section
-        id="programmation"
+        id="programme"
         class="l6t-g l6t-with_gutter"
     >
       <div

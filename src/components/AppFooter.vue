@@ -1,5 +1,7 @@
 <template>
-  <div class="v-app-footer l6t-with_gutter l6t-g l6t-with_row">
+  <div
+      id="infos"
+      class="v-app-footer l6t-with_gutter l6t-g l6t-with_row">
     <div class="l6t-g__coll-3-6 l6t-with_gutter">
       <img class="v-app-footer__map l6t-img" src="/public/map.jpg" alt="map">
     </div>
