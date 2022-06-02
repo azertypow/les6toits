@@ -20,3 +20,13 @@
   padding-top:   var(--l6t-gutter-half);
   padding-bottom:  var(--l6t-gutter-half);
 }
+
+.l6t-remove-child-margin {
+  > *:first-child {
+    margin-top: 0 !important;
+  }
+
+  > *:last-child {
+    margin-bottom: 0 !important;
+  }
+}

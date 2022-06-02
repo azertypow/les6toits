@@ -1,14 +1,38 @@
 <template>
   <section class="v-event">
 
-    <header class="v-event__header">
-      <div>{{ l6tEvent.dates }}</div>
-      <div>{{ l6tEvent.hours }}</div>
-      <div>
-        <img v-if     ="l6tEvent.tag === 'conservatoir'"  src="../assets/tags/conservatoire.svg" alt="conservatoire"/>
-        <img v-else-if="l6tEvent.tag === 'contrechamps'"  src="../assets/tags/contrechamps.svg"  alt="contrechamps"/>
-        <img v-else-if="l6tEvent.tag === 'eklekto'"       src="../assets/tags/eklekto.svg"       alt="eklekto"/>
-        <img v-else-if="l6tEvent.tag === 'orchestre'"     src="../assets/tags/OCG.svg"           alt="OCG"/>
+    <header class="v-event__header l6t-g">
+
+      <div
+          class="v-event__header__dates"
+      >
+        <div
+            v-for="date of l6tEvent.dates"
+            class="v-event__header__date-item l6t-text--alternate"
+        >
+          <template
+              v-if="date.jours"
+          >
+            <div
+                class="v-event__header__date-item__day"
+            >{{ date.jours }} |</div>
+
+            <div
+                class="v-event__header__date-item__hours"
+            >
+              <div
+                  v-for="hour of date.hours"
+                  class="v-event__header__date-item__hours__item"
+              >&nbsp;{{ hour }}</div>
+            </div>
+          </template>
+        </div>
+      </div>
+      <div class="v-event__header__tag" >
+        <img v-if     ="l6tEvent.tag === 'conservatoir'"  src="../assets/tags/conservatoire.svg" alt="conservatoire" style="height: 4rem" />
+        <img v-else-if="l6tEvent.tag === 'contrechamps'"  src="../assets/tags/contrechamps.svg"  alt="contrechamps"  style="height: 1.5rem" />
+        <img v-else-if="l6tEvent.tag === 'eklekto'"       src="../assets/tags/eklekto.svg"       alt="eklekto"       style="height: 1.5rem" />
+        <img v-else-if="l6tEvent.tag === 'orchestre'"     src="../assets/tags/OCG.svg"           alt="OCG"           style="height: 3rem" />
       </div>
       <h1
           v-if="l6tEvent.title"
@@ -60,7 +84,20 @@ export default defineComponent({
 
 <style lang="scss">
 .v-event {
-  border-top: solid 2px;
+  border-top: solid var(--l6t-ui-line);
+
+  .v-event__header {
+    justify-content: space-between;
+  }
+
+  .v-event__header__date-item {
+    margin-top: 1rem;
+    display: flex;
+  }
+
+  .v-event__header__tag {
+    margin-top: 1rem;
+  }
 
   .v-event__img {
     width: calc( 100% / 6 * 4);
@@ -68,7 +105,7 @@ export default defineComponent({
   }
 
   .v-event__header h1 {
-    text-decoration: underline;
+    border-bottom: solid var(--l6t-ui-line);
   }
 
   .v-event__subtitle {

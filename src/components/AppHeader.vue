@@ -41,5 +41,7 @@ export default defineComponent({
     color: inherit;
     text-decoration: none;
   }
+
+  background-color: var(--l6t-color-light);
 }
 </style>

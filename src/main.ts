@@ -25,11 +25,10 @@ window.setInterval(() => {
         title: "Comment le ciel est devenue",
         tag: "contrechamps",
         imageCoverURL: "https://images.unsplash.com/photo-1653460655240-14a4d7aeea4a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687",
-        hours: [
-          "10h 30",
-        ],
         dates: [
-          "01.02",
+          {jours: '01.02.22', hours: ['10h30', '11h45', '20h00']},
+          {jours: '02.02.22', hours: ['10h30', '11h45', '20h00']},
+          {jours: '03.02.22', hours: ['10h30', '11h45', '20h00']},
         ],
         location: "Le Chalet",
       },
@@ -42,11 +41,8 @@ window.setInterval(() => {
         title: "Comment le ciel est devenue",
         tag: "conservatoir",
         imageCoverURL: "https://images.unsplash.com/photo-1653460655240-14a4d7aeea4a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&h=250",
-        hours: [
-          "10h 30",
-        ],
         dates: [
-          "01.02",
+          {jours: '01.02.22', hours: ['10h30']},
         ],
         location: "Le Chalet",
       },
@@ -58,11 +54,10 @@ window.setInterval(() => {
         title: "Comment le ciel est devenue",
         tag: "eklekto",
         imageCoverURL: "https://images.unsplash.com/photo-1653460655240-14a4d7aeea4a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&h=687",
-        hours: [
-          "10h 30",
-        ],
         dates: [
-          "01.02",
+          {jours: '10.02.22', hours: ['10h30', '11h45', '20h00']},
+          {jours: '20.02.22', hours: ['11h45', '20h00']},
+          {jours: '30.02.22', hours: ['20h00']},
         ],
         location: "Le Chalet",
       },
@@ -74,11 +69,10 @@ window.setInterval(() => {
         title: "Comment le ciel est devenue",
         tag: "conservatoir",
         imageCoverURL: "https://images.unsplash.com/photo-1653460655240-14a4d7aeea4a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&h=500",
-        hours: [
-          "10h 30",
-        ],
         dates: [
-          "01.02",
+          {jours: '01.02.22', hours: ['10h30', '11h45', '20h00']},
+          {jours: '02.02.22', hours: ['10h30', '11h45', '20h00']},
+          {jours: '03.02.22', hours: ['10h30', '11h45', '20h00']},
         ],
         location: "Le Chalet",
       },
@@ -90,11 +84,9 @@ window.setInterval(() => {
         title: "Comment le ciel est devenue",
         tag: "orchestre",
         imageCoverURL: "https://images.unsplash.com/photo-1653460655240-14a4d7aeea4a?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300",
-        hours: [
-          "10h 30",
-        ],
         dates: [
-          "01.02",
+          {jours: '10.01.2023', hours: []},
+          {text: 'tous les mercredis du mois'},
         ],
         location: "Le Chalet",
       },

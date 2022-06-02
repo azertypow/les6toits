@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import {stringifyQuery} from "vue-router"
 
 export const useL6tStore = defineStore({
   id: 'l6tStore',
@@ -21,8 +22,7 @@ export interface IL6tData {
 export type textHTML = string
 
 export interface IL6tEvent {
-  dates:          string[]
-  hours:          string[]
+  dates:        l6tDate[]
   tag:            "contrechamps" | "conservatoir" | "orchestre" | "eklekto"
   imageCoverURL?:  string
   title?:          string
@@ -35,4 +35,15 @@ export interface IL6tEvent {
                   |"Athanor"
                   |"l'hermitage"
                   |"Le Chalet"
+}
+
+export type l6tDate = IL6tDate | IL6tDateCustom
+
+export interface IL6tDate {
+  jours: string
+  hours: string[]
+}
+
+export interface IL6tDateCustom {
+  text: string
 }

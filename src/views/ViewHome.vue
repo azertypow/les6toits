@@ -3,9 +3,9 @@
 
     <section
         id="presentation"
-        class="l6t-g l6t-with_gutter"
+        class="v-view-home__intro l6t-g l6t-with_gutter"
     >
-      <div class="l6t-g__coll-3-6 l6t-with_gutter" >
+      <div class="l6t-g__coll-3-6 l6t-with_gutter l6t-remove-child-margin" >
         <p>
           Un projet ambitieux au niveau architectural, un projet ambitieux en termes de collaboration artistique et un projet ancré au sein d’un quartier en plein développement.
           Notre souhait : nous insérer dans une dynamique de quartier plurielle
@@ -37,13 +37,31 @@
         id="programme"
         class="l6t-g l6t-with_gutter"
     >
+
       <div
           class="l6t-g__coll-3-6 l6t-with_gutter"
-          v-for="l6tEvent of l6tStore.l6tData.events"
       >
-        <event
-            :l6t-event="l6tEvent"
-        ></event>
+        <div
+            class="v-view-home__event-item"
+            v-for="l6tEvent of shortedEventsEven"
+        >
+          <event
+              :l6t-event="l6tEvent"
+          ></event>
+        </div>
+      </div>
+
+      <div
+          class="l6t-g__coll-3-6 l6t-with_gutter"
+      >
+        <div
+            class="v-view-home__event-item"
+            v-for="l6tEvent of shortedEventsOdd"
+        >
+          <event
+              :l6t-event="l6tEvent"
+          ></event>
+        </div>
       </div>
 
     </section>
@@ -52,6 +70,7 @@
 
 <script lang="ts">
 import {defineComponent} from "vue"
+import type {IL6tEvent} from "@/stores/l6tStore"
 import {useL6tStore} from "@/stores/l6tStore"
 import Event from "@/components/Event.vue"
 
@@ -61,14 +80,37 @@ export default defineComponent({
     return {
       l6tStore: useL6tStore()
     }
+  },
+
+  computed: {
+    shortedEventsEven(): IL6tEvent[] {
+      return this.l6tStore.l6tData.events.filter(
+          (value, index) => { return index % 2 === 0}
+      )
+    },
+    shortedEventsOdd(): IL6tEvent[] {
+      return this.l6tStore.l6tData.events.filter(
+          (value, index) => { return index % 2 !== 0}
+      )
+    }
+
   }
+
 })</script>
 
 <style lang="scss">
 .v-view-home {
+  .v-view-home__intro {
+    margin-bottom: 1rem;
+  }
+
   .v-view-home__cover {
     width: 100%;
     height: auto;
+  }
+
+  .v-view-home__event-item + .v-view-home__event-item {
+    margin-top: 1rem;
   }
 }
 </style>
