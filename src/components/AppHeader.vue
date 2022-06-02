@@ -11,7 +11,7 @@
           <a href="#programme">Programme</a>
         </div>
         <div class="l6t-g__coll-3-6">
-          <a href="#infos">infos pratique<br>et contacts</a>
+          <a href="#infos">infos pratiques<br>et contacts</a>
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ export interface IL6tEvent {
   title?:          string
   subtitle?:      string
   textContent:    textHTML
-  credit?:        string
+  credit?:        textHTML
   location:       "Salle Peter Minten"
                   |"Forum"
                   |"Agora"

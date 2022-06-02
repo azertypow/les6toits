@@ -1,5 +1,13 @@
 <template>
-  <section class="v-event">
+  <section
+      class="v-event"
+      :class="{
+        'is-orchestre'    : l6tEvent.tag === 'orchestre',
+        'is-eklekto'      : l6tEvent.tag === 'eklekto',
+        'is-contrechamps' : l6tEvent.tag === 'contrechamps',
+        'is-conservatoir' : l6tEvent.tag === 'conservatoir',
+      }"
+  >
 
     <header class="v-event__header l6t-g">
 
@@ -57,10 +65,10 @@
       ></div>
 
       <div
+          class="v-event__credit l6t-text--alternate"
           v-if="l6tEvent.credit"
-      >
-        {{l6tEvent.credit}}
-      </div>
+          v-html="l6tEvent.credit"
+      ></div>
 
     </div>
 
@@ -110,6 +118,34 @@ export default defineComponent({
 
   .v-event__subtitle {
     text-align: center;
+  }
+
+  .v-event__credit {
+
+  }
+
+  &.is-orchestre {
+    .v-event__img {
+      filter: url(#teal-lightgreen) hue-rotate(67.9deg) saturate(6) brightness(1.4) contrast(0.5);
+    }
+  }
+
+  &.is-eklekto {
+    .v-event__img {
+      filter: url(#teal-lightgreen) hue-rotate(189deg) saturate(2) brightness(1.12) contrast(0.6);
+    }
+  }
+
+  &.is-contrechamps {
+    .v-event__img {
+      filter: url(#teal-lightgreen) hue-rotate(55deg) saturate(1.39) brightness(1.7) contrast(.6);
+    }
+  }
+
+  &.is-conservatoir {
+    .v-event__img {
+      filter: url(#teal-lightgreen) hue-rotate(311deg) saturate(.47) brightness(.69) contrast(.6);
+    }
   }
 }
 </style>

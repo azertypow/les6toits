@@ -27,7 +27,7 @@
       <div class="l6t-g__coll-3-6 l6t-with_gutter" >
         <img
             class="v-view-home__cover l6t-img"
-            src="/public/image-sample.png"
+            src="/public/L6T_presentation.jpg"
             alt="image header"
         >
       </div>
