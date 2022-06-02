@@ -20,7 +20,7 @@ window.setInterval(() => {
     events: [
       {
         credit: "credit",
-        textContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.",
+        textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
         tag: "conservatoir",
@@ -37,7 +37,7 @@ window.setInterval(() => {
 
       {
         credit: "credit",
-        textContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.",
+        textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
         tag: "conservatoir",
@@ -53,7 +53,7 @@ window.setInterval(() => {
 
       {
         credit: "credit",
-        textContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.",
+        textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
         tag: "conservatoir",
@@ -69,7 +69,7 @@ window.setInterval(() => {
 
       {
         credit: "credit",
-        textContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.",
+        textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
         tag: "conservatoir",
@@ -85,7 +85,7 @@ window.setInterval(() => {
 
       {
         credit: "credit",
-        textContent: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.",
+        textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
         tag: "conservatoir",
