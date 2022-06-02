@@ -7,12 +7,11 @@
     <div class="l6t-g__coll-2-6 l6t-with_gutter l6t-with_row">
       <div class="l6t-g" >
         <div class="l6t-g__coll-3-6">
-          <a>linen</a>
-          <a>linen</a>
+          <a>Présentation</a>
+          <a>Programme</a>
         </div>
         <div class="l6t-g__coll-3-6">
-          <a>linen</a>
-          <a>linen</a>
+          <a>infos pratique et contacts</a>
         </div>
       </div>
     </div>
