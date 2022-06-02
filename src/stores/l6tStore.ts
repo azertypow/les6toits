@@ -18,6 +18,8 @@ export interface IL6tData {
   events: IL6tEvent[]
 }
 
+export type textHTML = string
+
 export interface IL6tEvent {
   dates:          string[]
   hours:          string[]
@@ -25,7 +27,7 @@ export interface IL6tEvent {
   imageCoverURL?:  string
   title?:          string
   subtitle?:      string
-  textContent:    string
+  textContent:    textHTML
   credit?:        string
   location:       "Salle Peter Minten"
                   |"Forum"
