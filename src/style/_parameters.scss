@@ -1,0 +1,7 @@
+:root {
+  --l6t-unit:         20px;
+
+
+  --l6t-gutter:       var(--l6t-unit);
+  --l6t-gutter-half:  calc( var(--l6t-gutter) / 2);
+}

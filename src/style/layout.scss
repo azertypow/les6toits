@@ -1,0 +1,22 @@
+.l6t-g {
+  display: flex;
+  flex-wrap: wrap;
+}
+.l6t-g__coll-1-6 { display:block; width: calc(100% / 6 * 1); }
+.l6t-g__coll-2-6 { display:block; width: calc(100% / 6 * 2); }
+.l6t-g__coll-3-6 { display:block; width: calc(100% / 6 * 3); }
+.l6t-g__coll-4-6 { display:block; width: calc(100% / 6 * 4); }
+.l6t-g__coll-5-6 { display:block; width: calc(100% / 6 * 5); }
+.l6t-g__coll-6-6 { display:block; width: calc(100% / 6 * 6); }
+
+.l6t-with_gutter {
+  box-sizing: border-box;
+  padding-left:   var(--l6t-gutter-half);
+  padding-right:  var(--l6t-gutter-half);
+}
+
+.l6t-with_row {
+  box-sizing: border-box;
+  padding-top:   var(--l6t-gutter-half);
+  padding-bottom:  var(--l6t-gutter-half);
+}
