@@ -29,6 +29,13 @@ export default defineComponent({
 
 <style lang="scss">
 .v-app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--l6t-app-header-height);
+
   a {
     display: block;
     color: inherit;

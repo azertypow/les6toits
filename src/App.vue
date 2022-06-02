@@ -22,5 +22,7 @@ export default defineComponent({
 
 <style lang="scss">
 .v-app {
+  padding-top: var(--l6t-app-header-height);
+  background-color: var(--l6t-color-light);
 }
 </style>
