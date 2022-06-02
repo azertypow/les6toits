@@ -22,9 +22,9 @@
           v-if="l6tEvent.subtitle"
       >{{l6tEvent.subtitle}}</h2>
 
-      <div>
-        {{l6tEvent.textContent}}
-      </div>
+      <div
+          v-html="l6tEvent.textContent"
+      ></div>
 
       <div
           v-if="l6tEvent.credit"
