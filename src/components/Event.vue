@@ -5,9 +5,9 @@
       <div>{{ l6tEvent.dates }}</div>
       <div>{{ l6tEvent.hours }}</div>
       <div>{{l6tEvent.tag}}</div>
-      <h3
+      <h1
           v-if="l6tEvent.title"
-      >{{l6tEvent.title}}</h3>
+      >{{l6tEvent.title}}</h1>
     </header>
 
     <div class="v-event__body">
@@ -18,9 +18,9 @@
           class="l6t-img v-event__img"
       >
 
-      <h4
+      <h2
           v-if="l6tEvent.subtitle"
-      >{{l6tEvent.subtitle}}</h4>
+      >{{l6tEvent.subtitle}}</h2>
 
       <div>
         {{l6tEvent.textContent}}
@@ -59,6 +59,10 @@ export default defineComponent({
   .v-event__img {
     width: calc( 100% / 6 * 4);
     margin: auto;
+  }
+
+  .v-event__header h1 {
+    text-decoration: underline;
   }
 }
 </style>

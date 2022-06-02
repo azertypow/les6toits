@@ -1,0 +1,32 @@
+.l6t-font-p {
+  font-size: .8rem;
+  line-height: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.l6t-font-h1 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.l6t-font-h2 {
+  @extend .l6t-font-p;
+  font-weight: 600;
+}
+
+
+p {
+  @extend .l6t-font-p;
+}
+
+h1 {
+  @extend .l6t-font-h1;
+}
+
+h2 {
+  @extend .l6t-font-h2;
+}
