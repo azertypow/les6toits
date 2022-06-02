@@ -13,11 +13,6 @@ import AppFooter from "@/components/AppFooter.vue"
 
 export default defineComponent({
   components: {AppFooter, AppHeader},
-  props: {
-    name: String,
-    msg: {type: String, required: true}
-  },
-
 })</script>
 
 <style lang="scss">

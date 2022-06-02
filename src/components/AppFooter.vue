@@ -60,9 +60,6 @@
 import {defineComponent} from "vue"
 
 export default defineComponent({
-  props: {
-  },
-
 })</script>
 
 <style lang="scss">
