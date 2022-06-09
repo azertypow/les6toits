@@ -19,7 +19,7 @@
             class="v-event__header__date-item l6t-text--alternate"
         >
           <template
-              v-if="date.jours"
+              v-if="isIL6tDate(date)"
           >
             <div
                 class="v-event__header__date-item__day"
@@ -79,12 +79,19 @@
 import {defineComponent} from "vue"
 import type {PropType} from "vue"
 import type {IL6tEvent} from "@/stores/l6tStore"
+import type {IL6tDate, l6tDate} from "@/stores/l6tStore"
 
 export default defineComponent({
   props: {
     l6tEvent: {
       type: Object as PropType<IL6tEvent>,
       required: true,
+    }
+  },
+
+  methods: {
+    isIL6tDate(date: l6tDate): date is IL6tDate {
+      return (date as IL6tDate).jours !== undefined
     }
   },
 
