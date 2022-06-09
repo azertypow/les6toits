@@ -32,6 +32,7 @@ export default defineComponent({
   box-sizing: border-box;
   width: 100%;
   height: var(--l6t-app-header-height);
+  z-index: 1000;
 
   a {
     display: block;

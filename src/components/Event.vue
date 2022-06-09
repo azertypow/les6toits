@@ -133,25 +133,29 @@ export default defineComponent({
 
   &.is-orchestre {
     .v-event__img {
-      filter: url(#teal-lightgreen) hue-rotate(67.9deg) saturate(6) brightness(1.4) contrast(0.5);
+      filter:         grayscale(1) url(#L6S-svg-gradient-map--yellow);
+      -webkit-filter: grayscale(1) url(#L6S-svg-gradient-map--yellow);
     }
   }
 
   &.is-eklekto {
     .v-event__img {
-      filter: url(#teal-lightgreen) hue-rotate(189deg) saturate(2) brightness(1.12) contrast(0.6);
+      filter:         grayscale(1) url(#L6S-svg-gradient-map--blue);
+      -webkit-filter: grayscale(1) url(#L6S-svg-gradient-map--blue);
     }
   }
 
   &.is-contrechamps {
     .v-event__img {
-      filter: url(#teal-lightgreen) hue-rotate(55deg) saturate(1.39) brightness(1.7) contrast(.6);
+      filter:         grayscale(1) url(#L6S-svg-gradient-map--reg);
+      -webkit-filter: grayscale(1) url(#L6S-svg-gradient-map--reg);
     }
   }
 
   &.is-conservatoir {
     .v-event__img {
-      filter: url(#teal-lightgreen) hue-rotate(311deg) saturate(.47) brightness(.69) contrast(.6);
+      filter:         grayscale(1) url(#L6S-svg-gradient-map--purple);
+      -webkit-filter: grayscale(1) url(#L6S-svg-gradient-map--purple);
     }
   }
 }
