@@ -1,7 +1,7 @@
 <template>
   <main
       class="v-app"
-      :class="this.deviceClassName"
+      :class="deviceClassName"
   >
     <app-header></app-header>
     <router-view></router-view>
