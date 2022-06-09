@@ -1,17 +1,17 @@
 <template>
   <header class="v-app-header l6t-g l6t-with_gutter l6t-with_row">
-    <div class="l6t-g__coll-1-6 l6t-with_gutter l6t-with_row">
+    <div class="v-app-header__logo l6t-g-m__coll-1-6 l6t-with_gutter l6t-with_row">
       les 6 toits
     </div>
 
-    <div class="l6t-g__coll-2-6 l6t-with_gutter l6t-with_row">
-      <div class="l6t-g" >
-        <div class="l6t-g__coll-3-6">
-          <a href="#presentation">Présentation</a>
-          <a href="#programme">Programme</a>
+    <div class="v-app-header__links-coll l6t-g-m__coll-2-6 l6t-with_gutter l6t-with_row">
+      <div class="v-app-header__links-g l6t-g" >
+        <div class="l6t-g-m__coll-3-6">
+          <a class="l6t-with_gutter" href="#presentation">Présentation</a>
+          <a class="l6t-with_gutter" href="#programme">Programme</a>
         </div>
-        <div class="l6t-g__coll-3-6">
-          <a href="#infos">infos pratiques<br>et contacts</a>
+        <div class="l6t-g-m__coll-3-6">
+          <a class="l6t-with_gutter" href="#infos">infos pratiques<br>& contacts</a>
         </div>
       </div>
     </div>
@@ -41,5 +41,23 @@ export default defineComponent({
   }
 
   background-color: var(--l6t-color-light);
+
+  .is-small-screen & {
+    flex-wrap: nowrap;
+
+    .v-app-header__logo {
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    .v-app-header__links-coll {
+      width: 100%;
+    }
+
+    .v-app-header__links-g {
+      width: 100%;
+      justify-content: right;
+    }
+  }
 }
 </style>

@@ -2,13 +2,13 @@
   <footer
       id="infos"
       class="v-app-footer l6t-with_gutter l6t-g l6t-with_row">
-    <div class="l6t-g__coll-3-6 l6t-with_gutter">
+    <div class="l6t-g-l__coll-3-6 l6t-with_gutter">
       <img class="v-app-footer__map l6t-img" src="/public/map.jpg" alt="map">
     </div>
 
-    <div class="v-app-footer__right l6t-g__coll-3-6">
+    <div class="v-app-footer__right l6t-g-l__coll-3-6">
       <div class="l6t-g">
-        <div class="l6t-g__coll-3-6 l6t-no-margin l6t-with_gutter">
+        <div class="l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
           <p>
             Les 6 toits
             Avenue de Chatelaine 43, 1201 Geneve, Suisse
@@ -17,7 +17,7 @@
             Arrêt de bus : Les Ouches 6, 19, 22, 51
           </p>
         </div>
-        <div class="l6t-g__coll-3-6 l6t-no-margin l6t-with_gutter">
+        <div class="l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
           <p>les6toits.ch</p>
           <p>Horaires Instrumentarium Lundi - mercredi : 11h - 15h</p>
         </div>

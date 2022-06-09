@@ -5,7 +5,7 @@
         id="presentation"
         class="v-view-home__intro l6t-g l6t-with_gutter"
     >
-      <div class="l6t-g__coll-3-6 l6t-with_gutter l6t-remove-child-margin" >
+      <div class="v-view-home__intro__text l6t-g-l__coll-3-6 l6t-with_gutter l6t-remove-child-margin" >
         <p>
           Un projet ambitieux au niveau architectural, un projet ambitieux en termes de collaboration artistique et un projet ancré au sein d’un quartier en plein développement.
           Notre souhait : nous insérer dans une dynamique de quartier plurielle
@@ -24,7 +24,7 @@
         </p>
       </div>
 
-      <div class="l6t-g__coll-3-6 l6t-with_gutter" >
+      <div class="v-view-home__intro__img l6t-g-l__coll-3-6 l6t-with_gutter" >
         <img
             class="v-view-home__cover l6t-img"
             src="/public/L6T_presentation.jpg"
@@ -39,7 +39,7 @@
     >
 
       <div
-          class="l6t-g__coll-3-6 l6t-with_gutter"
+          class="l6t-g-l__coll-3-6 l6t-with_gutter"
       >
         <div
             class="v-view-home__event-item"
@@ -52,7 +52,7 @@
       </div>
 
       <div
-          class="l6t-g__coll-3-6 l6t-with_gutter"
+          class="l6t-g-l__coll-3-6 l6t-with_gutter"
       >
         <div
             class="v-view-home__event-item"
@@ -107,10 +107,28 @@ export default defineComponent({
   .v-view-home__cover {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 
   .v-view-home__event-item + .v-view-home__event-item {
     margin-top: 1rem;
+  }
+
+  .is-small-screen &,
+  .is-medium-screen & {
+
+    .v-view-home__intro {
+      flex-direction: column-reverse;
+    }
+
+    .v-view-home__intro__img {
+      margin-bottom: 1rem;
+    }
+
+    .v-view-home__cover {
+      max-height: calc( 100vh - var(--l6t-app-header-height) - 1rem );
+    }
+
   }
 }
 </style>
