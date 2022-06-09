@@ -67,7 +67,7 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "conservatoir",
+        tag: "orchestre",
         imageCoverURL: "img/Contrechamps-Susanne-Peters.jpeg",
         dates: [
           {jours: '01.02.22', hours: ['10h30', '11h45', '20h00']},
@@ -82,7 +82,7 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "orchestre",
+        tag: "contrechamps",
         imageCoverURL: "img/CPMDT-cours-choix2.jpg",
         dates: [
           {jours: '10.01.2023', hours: []},
@@ -96,7 +96,7 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "orchestre",
+        tag: "contrechamps",
         imageCoverURL: "img/CPMDT-Theatrogramme.jpg",
         dates: [
           {jours: '10.01.2023', hours: []},
@@ -110,7 +110,7 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "orchestre",
+        tag: "contrechamps",
         imageCoverURL: "img/Eklekto.jpeg",
         dates: [
           {jours: '10.01.2023', hours: []},
@@ -124,7 +124,7 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "orchestre",
+        tag: "eklekto",
         imageCoverURL: "img/House Music©Nicolas Masson.jpg",
         dates: [
           {jours: '10.01.2023', hours: []},
@@ -138,7 +138,35 @@ window.setInterval(() => {
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
         title: "Comment le ciel est devenue",
-        tag: "orchestre",
+        tag: "conservatoir",
+        imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+        dates: [
+          {jours: '10.01.2023', hours: []},
+          {text: 'tous les mercredis du mois'},
+        ],
+        location: "Le Chalet",
+      },
+
+      {
+        credit: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi consequuntur culpa, delectus dignissimos, earum eos ex ipsum libero nulla obcaecati odio optio praesentium quam reiciendis tempora tenetur vero? Ipsam.</p>",
+        textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque explicabo facere, facilis fugiat harum, magni minima natus omnis pariatur ratione reiciendis rem rerum similique tempore vel veniam voluptas. Praesentium, sint.</p>",
+        subtitle: "subtitle",
+        title: "Comment le ciel est devenue",
+        tag: "eklekto",
+        imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+        dates: [
+          {jours: '10.01.2023', hours: []},
+          {text: 'tous les mercredis du mois'},
+        ],
+        location: "Le Chalet",
+      },
+
+      {
+        credit: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolore eius eveniet explicabo id illum ipsam ipsum modi perferendis quisquam reiciendis repellat sed totam ullam vero? Aut cumque dolor nemo!</p>",
+        textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque cum enim fugiat ipsum, modi molestias nisi obcaecati officiis perspiciatis, qui quis quisquam quos sed, sunt tenetur ullam velit voluptatum.</p>",
+        subtitle: "subtitle",
+        title: "Comment le ciel est devenue",
+        tag: "eklekto",
         imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
         dates: [
           {jours: '10.01.2023', hours: []},
