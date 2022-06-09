@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build --outDir docs/",
-    "preview": "vite preview --port 5050",
+    "build": "APP_ENV=production vue-tsc --noEmit && vite build --outDir docs/",
+    "preview": "APP_ENV=production vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
