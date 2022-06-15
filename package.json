@@ -2,9 +2,9 @@
   "name": "les6toits",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "APP_ENV=production vue-tsc --noEmit && vite build --outDir docs/",
-    "preview": "APP_ENV=production vite preview --port 5050",
+    "dev": "APP_ENV=dev vite",
+    "build": "APP_ENV=prod vue-tsc --noEmit && APP_ENV=prod vite build --outDir docs/",
+    "preview": "APP_ENV=prod vite preview --port 5050",
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {

@@ -5,6 +5,8 @@ import vue from '@vitejs/plugin-vue'
 
 const mode = process.env.APP_ENV
 
+console.log( 'app env mode: ', mode )
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
@@ -13,5 +15,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: mode === 'production' ? '/les6toits/' : '/',
+  base: mode === 'prod' ? '/les6toits/' : '/',
 })
