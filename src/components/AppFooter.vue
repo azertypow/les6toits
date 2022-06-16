@@ -3,7 +3,7 @@
       id="infos"
       class="v-app-footer l6t-with_gutter l6t-g l6t-with_row">
     <div class="l6t-g-l__coll-3-6 l6t-with_gutter">
-      <img class="v-app-footer__map l6t-img" src="/public/map.jpg" alt="map">
+      <img class="v-app-footer__map l6t-img" src="/public/L6T-carte-footer.jpeg" alt="map">
     </div>
 
     <div class="v-app-footer__right l6t-g-l__coll-3-6">
