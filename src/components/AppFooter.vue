@@ -1,7 +1,7 @@
 <template>
   <footer
       id="infos"
-      class="v-app-footer l6t-with_gutter l6t-g l6t-with_row">
+      class="v-app-footer l6t-with_gutter l6t-g">
     <div class="l6t-g-l__coll-3-6 l6t-with_gutter">
       <img class="v-app-footer__map l6t-img" src="/public/L6T-carte-footer.jpeg" alt="map">
     </div>
@@ -109,6 +109,10 @@ export default defineComponent({
 .v-app-footer {
   .v-app-footer__map {
     width: 100%;
+  }
+
+  > * {
+    margin-top: 1rem;
   }
 
   .v-app-footer__right {

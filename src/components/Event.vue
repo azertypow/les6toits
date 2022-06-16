@@ -67,7 +67,7 @@
       ></div>
 
       <div
-          class="v-event__credit l6t-text--alternate"
+          class="v-event__credit l6t-remove-child-margin l6t-text--alternate"
           v-if="l6tEvent.credit"
           v-html="l6tEvent.credit"
       ></div>
@@ -123,8 +123,11 @@ export default defineComponent({
 
   .v-event__header__title {
     width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
     h1 {
+      margin: 0;
       display: inline;
       text-shadow:
           -2px -2px var(--l6t-color-light),
