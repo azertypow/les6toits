@@ -9,20 +9,23 @@
     <div class="v-app-footer__right l6t-g-l__coll-3-6">
       <div class="l6t-g">
         <div class="l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
-          <p>
-            Les 6 toits
-            Avenue de Chatelaine 43, 1201 Geneve, Suisse
+          <p>Les 6 toits
+            <br>Avenue de Châtelaine 43,
+            <br>1201 Genève, Suisse
           </p>
           <p>
-            Arrêt de bus : Les Ouches 6, 19, 22, 51
+            Arrêt de bus :
+            <br>Les Ouches 6, 19, 22, 51
           </p>
         </div>
         <div class="l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
-          <p>les6toits.ch</p>
-          <p>Horaires Instrumentarium Lundi - mercredi : 11h - 15h</p>
+          <p>Horaires Instrumentarium
+            <br>Lundi -&nbsp;mercredi&nbsp;: 11h&nbsp;-&nbsp;15h</p>
         </div>
       </div>
-      <div class="l6t-text--alternate l6t-with_gutter l6t-no-margin">
+      <div
+          class="v-app-footer__right__desc l6t-text--alternate l6t-with_gutter l6t-no-margin"
+      >
         Les 6 Toits ont reçu le soutien de la Ville de Genève,
         de la Loterie Romande, de la Fondation Ernst Göhner
         et d’une Fondation Genevoise.
@@ -32,7 +35,6 @@
       <div class="v-app-footer__logo-list l6t-g">
         <img class="l6t-with_gutter" src="/public/logo/EGS_Schriftzug_2_schwarz-300x105.jpeg" alt="">
         <img class="l6t-with_gutter" src="/public/logo/logo-avec-soutien-ville-geneve-positif.jpg" alt="">
-        <img class="l6t-with_gutter" src="/public/logo/logo-head.png" alt="">
         <img class="l6t-with_gutter" src="/public/logo/LoRo-LogoBeneficiaires-NB-small.jpeg" alt="">
       </div>
     </div>
@@ -107,6 +109,8 @@ export default defineComponent({
 
 <style lang="scss">
 .v-app-footer {
+  padding-bottom: 1rem;
+
   .v-app-footer__map {
     width: 100%;
   }
@@ -122,13 +126,19 @@ export default defineComponent({
   }
 
   .v-app-footer__logo-list {
-    justify-content: space-between;
-
     > img {
       display: block;
       height: 2rem;
       mix-blend-mode: darken;
       filter: grayscale(1);
+      margin-top: 1rem;
+    }
+  }
+
+  .is-small-screen,
+  .is-medium-screen {
+    .v-app-footer__right__desc {
+      margin-top: 1rem;
     }
   }
 }

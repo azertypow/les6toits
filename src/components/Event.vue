@@ -57,20 +57,24 @@
           class="l6t-img v-event__img"
       >
 
-      <h2
-          class="v-event__subtitle"
-          v-if="l6tEvent.subtitle"
-      >{{l6tEvent.subtitle}}</h2>
-
       <div
-          v-html="l6tEvent.textContent"
-      ></div>
+          class="v-event__body_text"
+      >
+        <h2
+            class="v-event__subtitle"
+            v-if="l6tEvent.subtitle"
+        >{{l6tEvent.subtitle}}</h2>
 
-      <div
-          class="v-event__credit l6t-remove-child-margin l6t-text--alternate"
-          v-if="l6tEvent.credit"
-          v-html="l6tEvent.credit"
-      ></div>
+        <div
+            v-html="l6tEvent.textContent"
+        ></div>
+
+        <div
+            class="v-event__credit l6t-remove-child-margin l6t-text--alternate"
+            v-if="l6tEvent.credit"
+            v-html="l6tEvent.credit"
+        ></div>
+      </div>
 
     </div>
 
@@ -105,6 +109,8 @@ export default defineComponent({
 
   .v-event__header {
     justify-content: space-between;
+    max-width: 750px;
+    margin: auto;
   }
 
   .v-event__header__date-item {
@@ -118,6 +124,11 @@ export default defineComponent({
 
   .v-event__img {
     width: calc( 100% / 6 * 4);
+    margin: auto;
+  }
+
+  .v-event__body_text {
+    max-width: 750px;
     margin: auto;
   }
 
