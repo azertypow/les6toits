@@ -42,9 +42,11 @@
         <img v-else-if="l6tEvent.tag === 'eklekto'"       src="../assets/tags/eklekto.svg"       alt="eklekto"       style="height: 1.5rem" />
         <img v-else-if="l6tEvent.tag === 'orchestre'"     src="../assets/tags/OCG.svg"           alt="OCG"           style="height: 3rem" />
       </div>
-      <h1
-          v-if="l6tEvent.title"
-      >{{l6tEvent.title}}</h1>
+      <div class="v-event__header__title">
+        <h1
+            v-if="l6tEvent.title"
+        >{{l6tEvent.title}}</h1>
+      </div>
     </header>
 
     <div class="v-event__body">
@@ -119,8 +121,9 @@ export default defineComponent({
     margin: auto;
   }
 
-  .v-event__header h1 {
-    border-bottom: solid var(--l6t-ui-line);
+  .v-event__header__title h1 {
+    box-shadow:
+        inset 0 calc(-1 * var(--l6t-ui-line)) var(--l6t-color-dark);
   }
 
   .v-event__subtitle {
