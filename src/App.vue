@@ -1,7 +1,7 @@
 <template>
   <main
       class="v-app"
-      :class="this.l6tStore.deviceClassName"
+      :class="l6tStore.deviceClassName"
   >
     <app-header></app-header>
     <router-view></router-view>
