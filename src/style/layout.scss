@@ -1,6 +1,14 @@
 .l6t-g {
   display: flex;
   flex-wrap: wrap;
+
+  &.l6t-g--direction-column {
+    flex-direction: column;
+  }
+
+  &.l6t-g--space-between {
+    justify-content: space-between;
+  }
 }
 
 
@@ -19,6 +27,16 @@
   .l6t-g-m__coll-4-6 { display:block; width: calc(100% / 6 * 4); }
   .l6t-g-m__coll-5-6 { display:block; width: calc(100% / 6 * 5); }
   .l6t-g-m__coll-6-6 { display:block; width: calc(100% / 6 * 6); }
+
+  .l6t-g {
+    &.l6t-g-m--direction-column {
+      flex-direction: column;
+    }
+
+    &.l6t-g-m--space-between {
+      justify-content: space-between;
+    }
+  }
 }
 
 .is-large-screen {
@@ -28,6 +46,16 @@
   .l6t-g-l__coll-4-6 { display:block; width: calc(100% / 6 * 4); }
   .l6t-g-l__coll-5-6 { display:block; width: calc(100% / 6 * 5); }
   .l6t-g-l__coll-6-6 { display:block; width: calc(100% / 6 * 6); }
+
+  .l6t-g {
+    &.l6t-g-l--direction-column {
+      flex-direction: column;
+    }
+
+    &.l6t-g-l--space-between {
+      justify-content: space-between;
+    }
+  }
 }
 
 .l6t-with_gutter {

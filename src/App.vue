@@ -1,7 +1,7 @@
 <template>
   <main
       class="v-app"
-      :class="deviceClassName"
+      :class="this.l6tStore.deviceClassName"
   >
     <app-header></app-header>
     <router-view></router-view>
@@ -15,20 +15,21 @@ import AppHeader from "@/components/AppHeader.vue"
 import AppFooter from "@/components/AppFooter.vue"
 import type {DeviceClassName} from "@/scripts/setDeviceClassName"
 import {setDeviceClassName} from "@/scripts/setDeviceClassName"
+import {useL6tStore} from "@/stores/l6tStore"
 
 export default defineComponent({
   components: {AppFooter, AppHeader},
 
   data() {
     return {
-      deviceClassName: ""
+      l6tStore: useL6tStore()
     }
   },
 
   mounted() {
-    this.deviceClassName = setDeviceClassName()
+    this.l6tStore.deviceClassName = setDeviceClassName()
 
-    window.addEventListener("resize", () => { this.deviceClassName = setDeviceClassName() })
+    window.addEventListener("resize", () => { this.l6tStore.deviceClassName = setDeviceClassName() })
   }
 })</script>
 

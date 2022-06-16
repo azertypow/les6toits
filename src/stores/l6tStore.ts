@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia'
 import {stringifyQuery} from "vue-router"
+import type {DeviceClassName} from "@/scripts/setDeviceClassName"
 
 export const useL6tStore = defineStore({
   id: 'l6tStore',
   state: () => ({
+    deviceClassName: "" as DeviceClassName,
     l6tData: {
       events: []
     } as IL6tData

@@ -6,36 +6,48 @@
       <img class="v-app-footer__map l6t-img" src="/public/L6T-carte-footer.jpeg" alt="map">
     </div>
 
-    <div class="v-app-footer__right l6t-g-l__coll-3-6">
-      <div class="l6t-g">
-        <div class="l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
-          <p>Les 6 toits
-            <br>Avenue de Châtelaine 43,
-            <br>1201 Genève, Suisse
-          </p>
-          <p>
-            Arrêt de bus :
-            <br>Les Ouches 6, 19, 22, 51
-          </p>
+    <div class="v-app-footer__right l6t-g__coll-6-6 l6t-g-l__coll-3-6">
+      <div class="l6t-g l6t-g-l--direction-column l6t-g-l--space-between">
+
+        <div class="l6t-g__coll-6-6 l6t-g-m__coll-3-6 l6t-g-l__coll-6-6">
+          <div class="l6t-g">
+            <div class="l6t-g__coll-6-6 l6t-g-m__coll-6-6 l6t-g-l__coll-6-6" >
+              <div class="l6t-g">
+                <div class="l6t-g__coll-3-6 l6t-g-m__coll-6-6 l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
+                  <p>Les 6 toits
+                    <br>Avenue de Châtelaine 43,
+                    <br>1201 Genève, Suisse
+                  </p>
+                  <p>
+                    Arrêt de bus :
+                    <br>Les Ouches 6, 19, 22, 51
+                  </p>
+                </div>
+                <div class="v-app-footer__time l6t-g__coll-6-6 l6t-g-m__coll-6-6 l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
+                  <p>Horaires Instrumentarium
+                    <br>Lundi -&nbsp;mercredi&nbsp;: 11h&nbsp;-&nbsp;15h</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
-          <p>Horaires Instrumentarium
-            <br>Lundi -&nbsp;mercredi&nbsp;: 11h&nbsp;-&nbsp;15h</p>
+
+        <div class="l6t-g__coll-6-6 l6t-g-m__coll-3-6 l6t-g-l__coll-6-6">
+          <div
+              class="v-app-footer__right__desc l6t-text--alternate l6t-with_gutter l6t-no-margin"
+          >
+            Les 6 Toits ont reçu le soutien de la Ville de Genève,
+            de la Loterie Romande, de la Fondation Ernst Göhner
+            et d’une Fondation Genevoise.
+            La création de l’identité visuelle est réalisé
+            en partenariat avec la Head.
+          </div>
+          <logo-list v-if="l6tStore.deviceClassName !== 'is-large-screen'" ></logo-list>
         </div>
-      </div>
-      <div
-          class="v-app-footer__right__desc l6t-text--alternate l6t-with_gutter l6t-no-margin"
-      >
-        Les 6 Toits ont reçu le soutien de la Ville de Genève,
-        de la Loterie Romande, de la Fondation Ernst Göhner
-        et d’une Fondation Genevoise.
-        La création de l’identité visuelle est réalisé
-        en partenariat avec la Head.
-      </div>
-      <div class="v-app-footer__logo-list l6t-g">
-        <img class="l6t-with_gutter" src="/public/logo/EGS_Schriftzug_2_schwarz-300x105.jpeg" alt="">
-        <img class="l6t-with_gutter" src="/public/logo/logo-avec-soutien-ville-geneve-positif.jpg" alt="">
-        <img class="l6t-with_gutter" src="/public/logo/LoRo-LogoBeneficiaires-NB-small.jpeg" alt="">
+
+        <div v-if="l6tStore.deviceClassName === 'is-large-screen'" class="l6t-g-l__coll-6-6">
+          <logo-list></logo-list>
+        </div>
       </div>
     </div>
 
@@ -103,8 +115,18 @@
 
 <script lang="ts">
 import {defineComponent} from "vue"
+import LogoList from "@/components/LogoList.vue"
+import {useL6tStore} from "@/stores/l6tStore"
 
 export default defineComponent({
+  components: {LogoList},
+
+  data() {
+    return {
+      l6tStore: useL6tStore(),
+    }
+  }
+
 })</script>
 
 <style lang="scss">
@@ -120,25 +142,21 @@ export default defineComponent({
   }
 
   .v-app-footer__right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    > * {
+      height: 100%;
+    }
   }
 
-  .v-app-footer__logo-list {
-    > img {
-      display: block;
-      height: 2rem;
-      mix-blend-mode: darken;
-      filter: grayscale(1);
+  .is-small-screen & {
+    .v-app-footer__right__desc {
       margin-top: 1rem;
     }
   }
 
-  .is-small-screen,
-  .is-medium-screen {
-    .v-app-footer__right__desc {
-      margin-top: 1rem;
+  .is-small-screen &,
+  .is-medium-screen & {
+    .v-app-footer__time {
+      margin-top: 1rem !important;
     }
   }
 }
