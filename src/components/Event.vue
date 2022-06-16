@@ -121,9 +121,20 @@ export default defineComponent({
     margin: auto;
   }
 
-  .v-event__header__title h1 {
-    box-shadow:
-        inset 0 calc(-1 * var(--l6t-ui-line)) var(--l6t-color-dark);
+  .v-event__header__title {
+    width: 100%;
+
+    h1 {
+      display: inline;
+      text-shadow:
+          -2px -2px var(--l6t-color-light),
+          -2px 2px  var(--l6t-color-light),
+          2px -2px  var(--l6t-color-light),
+          2px 2px   var(--l6t-color-light);
+      box-shadow:
+          inset 0 calc(-1 * .075em                      ) var(--l6t-color-light),
+          inset 0 calc(-1 * .075em - var(--l6t-ui-line) ) var(--l6t-color-dark);
+    }
   }
 
   .v-event__subtitle {
