@@ -22,7 +22,7 @@ window.setInterval(() => {
         credit: "credit",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "contrechamps",
         imageCoverURL: "img/Contrechamps-Anne-Bassand.png",
         dates: [
@@ -38,7 +38,7 @@ window.setInterval(() => {
         credit: "credit",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "conservatoir",
         imageCoverURL: "img/Contrechamps-Flub-1.jpeg",
         dates: [
@@ -51,7 +51,7 @@ window.setInterval(() => {
         credit: "credit",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "eklekto",
         imageCoverURL: "img/Contrechamps-Flub2.jpeg",
         dates: [
@@ -66,7 +66,7 @@ window.setInterval(() => {
         credit: "credit",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "orchestre",
         imageCoverURL: "img/Contrechamps-Susanne-Peters.jpeg",
         dates: [
@@ -81,7 +81,7 @@ window.setInterval(() => {
         credit: "credit",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "contrechamps",
         imageCoverURL: "img/CPMDT-cours-choix2.jpg",
         dates: [
@@ -95,7 +95,7 @@ window.setInterval(() => {
         credit: "credit",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "contrechamps",
         imageCoverURL: "img/CPMDT-Theatrogramme.jpg",
         dates: [
@@ -109,7 +109,7 @@ window.setInterval(() => {
         credit: "credit",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "contrechamps",
         imageCoverURL: "img/Eklekto.jpeg",
         dates: [
@@ -123,7 +123,7 @@ window.setInterval(() => {
         credit: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>Consectetur fuga minus nemo non quasi saepe? Neque, placeat, tenetur?</p><p>Ad deserunt dolor doloribus fuga harum minus obcaecati officia quis quisquam sit?</p>",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "eklekto",
         imageCoverURL: "img/House Music©Nicolas Masson.jpg",
         dates: [
@@ -137,7 +137,7 @@ window.setInterval(() => {
         credit: "<p>Lorem ipsum dolor sit amet, <i>consectetur adipisicing elit.</i> Adipisci amet animi beatae ducimus eum fuga fugiat, officiis qui quidem quisquam sapiente tempora tempore vitae. Dicta impedit perferendis quia soluta voluptas!</p>",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt et fugiat inventore nemo rem sed sit! Aspernatur atque aut deserunt, eaque, esse eum fuga laudantium possimus quasi quia sequi tenetur.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "conservatoir",
         imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
         dates: [
@@ -151,7 +151,7 @@ window.setInterval(() => {
         credit: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi consequuntur culpa, delectus dignissimos, earum eos ex ipsum libero nulla obcaecati odio optio praesentium quam reiciendis tempora tenetur vero? Ipsam.</p>",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque explicabo facere, facilis fugiat harum, magni minima natus omnis pariatur ratione reiciendis rem rerum similique tempore vel veniam voluptas. Praesentium, sint.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "eklekto",
         imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
         dates: [
@@ -165,7 +165,7 @@ window.setInterval(() => {
         credit: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolore eius eveniet explicabo id illum ipsam ipsum modi perferendis quisquam reiciendis repellat sed totam ullam vero? Aut cumque dolor nemo!</p>",
         textContent: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque cum enim fugiat ipsum, modi molestias nisi obcaecati officiis perspiciatis, qui quis quisquam quos sed, sunt tenetur ullam velit voluptatum.</p>",
         subtitle: "subtitle",
-        title: "Comment le ciel est devenue",
+        title: "Comment le ciel est devenu",
         tag: "eklekto",
         imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
         dates: [
