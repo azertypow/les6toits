@@ -24,7 +24,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "contrechamps",
-        imageCoverURL: "img/Contrechamps-Anne-Bassand.png",
+        imageCoverURL: {
+          originalUrl:'img/Contrechamps-Anne-Bassand.png',
+          largeUrl:   'img/Contrechamps-Anne-Bassand.png',
+          mediumUrl:  'img/Contrechamps-Anne-Bassand.png',
+          smallUrl:   'img/Contrechamps-Anne-Bassand.png',
+        },
         dates: [
           {jours: '01.02.22', hours: ['10h30', '11h45', '20h00']},
           {jours: '02.02.22', hours: ['10h30', '11h45', '20h00']},
@@ -40,7 +45,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "conservatoir",
-        imageCoverURL: "img/Contrechamps-Flub-1.jpeg",
+        imageCoverURL: {
+          originalUrl:'img/Contrechamps-Flub-1.jpeg',
+          largeUrl:   'img/Contrechamps-Flub-1.jpeg',
+          mediumUrl:  'img/Contrechamps-Flub-1.jpeg',
+          smallUrl:   'img/Contrechamps-Flub-1.jpeg',
+        },
         dates: [
           {jours: '01.02.22', hours: ['10h30']},
         ],
@@ -53,7 +63,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "eklekto",
-        imageCoverURL: "img/Contrechamps-Flub2.jpeg",
+        imageCoverURL: {
+          originalUrl:"img/Contrechamps-Flub2.jpeg",
+          largeUrl:   "img/Contrechamps-Flub2.jpeg",
+          mediumUrl:  "img/Contrechamps-Flub2.jpeg",
+          smallUrl:   "img/Contrechamps-Flub2.jpeg",
+        },
         dates: [
           {jours: '10.02.22', hours: ['10h30', '11h45', '20h00']},
           {jours: '20.02.22', hours: ['11h45', '20h00']},
@@ -68,7 +83,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "orchestre",
-        imageCoverURL: "img/Contrechamps-Susanne-Peters.jpeg",
+        imageCoverURL: {
+          originalUrl:"img/Contrechamps-Susanne-Peters.jpeg",
+          largeUrl:   "img/Contrechamps-Susanne-Peters.jpeg",
+          mediumUrl:  "img/Contrechamps-Susanne-Peters.jpeg",
+          smallUrl:   "img/Contrechamps-Susanne-Peters.jpeg",
+        },
         dates: [
           {jours: '01.02.22', hours: ['10h30', '11h45', '20h00']},
           {jours: '02.02.22', hours: ['10h30', '11h45', '20h00']},
@@ -83,7 +103,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "contrechamps",
-        imageCoverURL: "img/CPMDT-cours-choix2.jpg",
+        imageCoverURL: {
+          originalUrl:"img/CPMDT-cours-choix2.jpg",
+          largeUrl:   "img/CPMDT-cours-choix2.jpg",
+          mediumUrl:  "img/CPMDT-cours-choix2.jpg",
+          smallUrl:   "img/CPMDT-cours-choix2.jpg",
+        },
         dates: [
           {jours: '10.01.2023', hours: []},
           {text: 'tous les mercredis du mois'},
@@ -97,7 +122,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "contrechamps",
-        imageCoverURL: "img/CPMDT-Theatrogramme.jpg",
+        imageCoverURL: {
+          originalUrl:"img/CPMDT-Theatrogramme.jpg",
+          largeUrl:   "img/CPMDT-Theatrogramme.jpg",
+          mediumUrl:  "img/CPMDT-Theatrogramme.jpg",
+          smallUrl:   "img/CPMDT-Theatrogramme.jpg",
+        },
         dates: [
           {jours: '10.01.2023', hours: []},
           {text: 'tous les mercredis du mois'},
@@ -111,7 +141,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "contrechamps",
-        imageCoverURL: "img/Eklekto.jpeg",
+        imageCoverURL: {
+          originalUrl:"img/Eklekto.jpeg",
+          largeUrl:   "img/Eklekto.jpeg",
+          mediumUrl:  "img/Eklekto.jpeg",
+          smallUrl:   "img/Eklekto.jpeg",
+        },
         dates: [
           {jours: '10.01.2023', hours: []},
           {text: 'tous les mercredis du mois'},
@@ -125,7 +160,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "eklekto",
-        imageCoverURL: "img/House Music©Nicolas Masson.jpg",
+        imageCoverURL: {
+          originalUrl:"img/House Music©Nicolas Masson.jpg",
+          largeUrl:   "img/House Music©Nicolas Masson.jpg",
+          mediumUrl:  "img/House Music©Nicolas Masson.jpg",
+          smallUrl:   "img/House Music©Nicolas Masson.jpg",
+        },
         dates: [
           {jours: '10.01.2023', hours: []},
           {text: 'tous les mercredis du mois'},
@@ -139,7 +179,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "conservatoir",
-        imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+        imageCoverURL: {
+          originalUrl:"img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          largeUrl:   "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          mediumUrl:  "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          smallUrl:   "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+        },
         dates: [
           {jours: '10.01.2023', hours: []},
           {text: 'tous les mercredis du mois'},
@@ -153,7 +198,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "eklekto",
-        imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+        imageCoverURL: {
+          originalUrl:"img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          largeUrl:   "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          mediumUrl:  "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          smallUrl:   "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+        },
         dates: [
           {jours: '10.01.2023', hours: []},
           {text: 'tous les mercredis du mois'},
@@ -167,7 +217,12 @@ window.setInterval(() => {
         subtitle: "subtitle",
         title: "Comment le ciel est devenu",
         tag: "eklekto",
-        imageCoverURL: "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+        imageCoverURL: {
+          originalUrl:"img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          largeUrl:   "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          mediumUrl:  "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+          smallUrl:   "img/L'OCG-Portrait-de-groupe-automne2021.jpg",
+        },
         dates: [
           {jours: '10.01.2023', hours: []},
           {text: 'tous les mercredis du mois'},

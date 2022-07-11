@@ -26,7 +26,7 @@ export type textHTML = string
 export interface IL6tEvent {
   dates:        l6tDate[]
   tag:            "contrechamps" | "conservatoir" | "orchestre" | "eklekto"
-  imageCoverURL?:  string
+  imageCoverURL?:  IL6tImage
   title?:          string
   subtitle?:      string
   textContent:    textHTML
@@ -37,6 +37,13 @@ export interface IL6tEvent {
                   |"Athanor"
                   |"l'hermitage"
                   |"Le Chalet"
+}
+
+export interface IL6tImage {
+  originalUrl: string
+  largeUrl: string
+  mediumUrl: string
+  smallUrl: string
 }
 
 export type l6tDate = IL6tDate | IL6tDateCustom

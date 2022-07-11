@@ -52,7 +52,7 @@
     <div class="v-event__body">
       <img
           v-if="l6tEvent.imageCoverURL"
-          :src="l6tEvent.imageCoverURL"
+          :src="l6tEvent.imageCoverURL.largeUrl"
           alt="item cover"
           class="l6t-img v-event__img"
       >
