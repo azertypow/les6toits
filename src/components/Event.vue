@@ -190,8 +190,8 @@ export default defineComponent({
 
   &.is-empty-tag {
     .v-event__img {
-      filter:         brightness(50%) contrast(90%) grayscale(100%) url(#L6S-svg-gradient-map--green);
-      -webkit-filter: brightness(50%) contrast(90%) grayscale(100%) url(#L6S-svg-gradient-map--green);
+      filter:         brightness(50%) contrast(50%) grayscale(100%) url(#L6S-svg-gradient-map--green);
+      -webkit-filter: brightness(50%) contrast(50%) grayscale(100%) url(#L6S-svg-gradient-map--green);
     }
   }
 }
