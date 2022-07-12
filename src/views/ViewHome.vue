@@ -90,6 +90,12 @@ export default defineComponent({
     margin-bottom: 1rem;
   }
 
+  .v-view-home__intro__text {
+    h2 {
+      text-align: center;
+    }
+  }
+
   .v-view-home__cover {
     width: 100%;
     height: auto;
