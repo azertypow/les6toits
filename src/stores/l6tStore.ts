@@ -25,7 +25,7 @@ export type textHTML = string
 
 export interface IL6tEvent {
   dates:        l6tDate[]
-  tag:            "contrechamps" | "conservatoir" | "orchestre" | "eklekto"
+  tags:            "contrechamps" | "conservatoir" | "orchestre" | "eklekto"
   imageCoverURL?:  IL6tImage
   title?:          string
   subtitle?:      string

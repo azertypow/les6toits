@@ -2,10 +2,10 @@
   <section
       class="v-event"
       :class="{
-        'is-orchestre'    : l6tEvent.tag === 'orchestre',
-        'is-eklekto'      : l6tEvent.tag === 'eklekto',
-        'is-contrechamps' : l6tEvent.tag === 'contrechamps',
-        'is-conservatoir' : l6tEvent.tag === 'conservatoir',
+        'is-orchestre'    : l6tEvent.tags === 'orchestre',
+        'is-eklekto'      : l6tEvent.tags === 'eklekto',
+        'is-contrechamps' : l6tEvent.tags === 'contrechamps',
+        'is-conservatoir' : l6tEvent.tags === 'conservatoir',
       }"
   >
 
@@ -37,10 +37,10 @@
         </div>
       </div>
       <div class="v-event__header__tag" >
-        <img v-if     ="l6tEvent.tag === 'conservatoir'"  src="../assets/tags/conservatoire.svg" alt="conservatoire" style="height: 4rem" />
-        <img v-else-if="l6tEvent.tag === 'contrechamps'"  src="../assets/tags/contrechamps.svg"  alt="contrechamps"  style="height: 1.5rem" />
-        <img v-else-if="l6tEvent.tag === 'eklekto'"       src="../assets/tags/eklekto.svg"       alt="eklekto"       style="height: 1.5rem" />
-        <img v-else-if="l6tEvent.tag === 'orchestre'"     src="../assets/tags/OCG.svg"           alt="OCG"           style="height: 3rem" />
+        <img v-if     ="l6tEvent.tags === 'conservatoir'" src="../assets/tags/conservatoire.svg" alt="conservatoire" style="height: 4rem" />
+        <img v-else-if="l6tEvent.tags === 'contrechamps'" src="../assets/tags/contrechamps.svg" alt="contrechamps" style="height: 1.5rem" />
+        <img v-else-if="l6tEvent.tags === 'eklekto'" src="../assets/tags/eklekto.svg" alt="eklekto" style="height: 1.5rem" />
+        <img v-else-if="l6tEvent.tags === 'orchestre'" src="../assets/tags/OCG.svg" alt="OCG" style="height: 3rem" />
       </div>
       <div class="v-event__header__title">
         <h1
