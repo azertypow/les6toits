@@ -2,10 +2,11 @@
   <section
       class="v-event"
       :class="{
-        'is-orchestre'    : l6tEvent.tags === 'orchestre',
-        'is-eklekto'      : l6tEvent.tags === 'eklekto',
-        'is-contrechamps' : l6tEvent.tags === 'contrechamps',
-        'is-conservatoir' : l6tEvent.tags === 'conservatoir',
+        'is-orchestre'    : l6tEvent.tags.split(',')[0] === 'orchestre',
+        'is-eklekto'      : l6tEvent.tags.split(',')[0] === 'eklekto',
+        'is-contrechamps' : l6tEvent.tags.split(',')[0] === 'contrechamps',
+        'is-conservatoire' : l6tEvent.tags.split(',')[0] === 'conservatoire',
+        'is-empty-tag'    : l6tEvent.tags.split(',')[0] === '',
       }"
   >
 
@@ -37,10 +38,10 @@
         </div>
       </div>
       <div class="v-event__header__tag" >
-        <img v-if     ="l6tEvent.tags === 'conservatoir'" src="../assets/tags/conservatoire.svg" alt="conservatoire" style="height: 4rem" />
-        <img v-else-if="l6tEvent.tags === 'contrechamps'" src="../assets/tags/contrechamps.svg" alt="contrechamps" style="height: 1.5rem" />
-        <img v-else-if="l6tEvent.tags === 'eklekto'" src="../assets/tags/eklekto.svg" alt="eklekto" style="height: 1.5rem" />
-        <img v-else-if="l6tEvent.tags === 'orchestre'" src="../assets/tags/OCG.svg" alt="OCG" style="height: 3rem" />
+        <img v-if     ="l6tEvent.tags.split(',')[0] === 'conservatoire'"  src="../assets/tags/conservatoire.svg" alt="conservatoire" style="height: 4rem" />
+        <img v-else-if="l6tEvent.tags.split(',')[0] === 'contrechamps'"   src="../assets/tags/contrechamps.svg" alt="contrechamps" style="height: 1.5rem" />
+        <img v-else-if="l6tEvent.tags.split(',')[0] === 'eklekto'"        src="../assets/tags/eklekto.svg" alt="eklekto" style="height: 1.5rem" />
+        <img v-else-if="l6tEvent.tags.split(',')[0] === 'orchestre'"      src="../assets/tags/OCG.svg" alt="OCG" style="height: 3rem" />
       </div>
       <div class="v-event__header__title">
         <h1
@@ -180,10 +181,17 @@ export default defineComponent({
     }
   }
 
-  &.is-conservatoir {
+  &.is-conservatoire {
     .v-event__img {
       filter:         grayscale(1) url(#L6S-svg-gradient-map--purple);
       -webkit-filter: grayscale(1) url(#L6S-svg-gradient-map--purple);
+    }
+  }
+
+  &.is-empty-tag {
+    .v-event__img {
+      filter:         brightness(50%) contrast(90%) grayscale(100%) url(#L6S-svg-gradient-map--green);
+      -webkit-filter: brightness(50%) contrast(90%) grayscale(100%) url(#L6S-svg-gradient-map--green);
     }
   }
 }
