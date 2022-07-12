@@ -32,7 +32,7 @@
               <div
                   v-for="hour of date.hours"
                   class="v-event__header__date-item__hours__item"
-              >&nbsp;{{ hour }}</div>
+              >&nbsp;{{ hour.replace(/:[0-9]{2}$/i, '') }}</div>
             </div>
           </template>
         </div>
