@@ -129,6 +129,16 @@ export default defineComponent({
       max-height: calc( 100vh - var(--l6t-app-header-height) - 1rem );
     }
 
+    #programme {
+      > * {
+        width: 100%;
+      }
+
+      > *:nth-child(2) {
+        margin-top: 1rem;
+      }
+    }
+
   }
 }
 </style>
