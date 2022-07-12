@@ -9,6 +9,10 @@ import {useL6tStore} from "@/stores/l6tStore"
 
 const app = createApp(App)
 
+app.config.compilerOptions.isCustomElement = (tag)=>{
+  return tag.match('fecolormatrix') !== null
+}
+
 app.use(createPinia())
 app.use(router)
 

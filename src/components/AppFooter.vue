@@ -111,6 +111,13 @@
     </filter>
   </svg>
 
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important;">
+    <filter id="L6S-svg-gradient-map--purple">
+      <feColorMatrix type="matrix"
+                     values="0.25098039215686274 0.25098039215686274 0.25098039215686274  0 0 0.44313725490196076 0.44313725490196076 0.44313725490196076  0 0 0.11764705882352941 0.11764705882352941 0.11764705882352941  0 0  0 0 0 1 0"/>
+    </filter>
+  </svg>
+
 </template>
 
 <script lang="ts">
