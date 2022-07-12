@@ -1,8 +1,11 @@
 <template>
   <header class="v-app-header l6t-g l6t-with_gutter l6t-with_row">
-    <div class="v-app-header__logo l6t-g-m__coll-1-6 l6t-with_gutter l6t-with_row">
-      les 6 toits
-    </div>
+    <router-link
+        to="/"
+        class="v-app-header__logo l6t-g-m__coll-1-6 l6t-with_gutter l6t-with_row"
+    >
+      <img src="../assets/L6T-logo.svg" alt="logo les6toits" draggable="false">
+    </router-link>
 
     <div class="v-app-header__links-coll l6t-g-m__coll-2-6 l6t-with_gutter l6t-with_row">
       <div class="v-app-header__links-g l6t-g" >
@@ -41,6 +44,15 @@ export default defineComponent({
   }
 
   background-color: var(--l6t-color-light);
+
+  .v-app-header__logo {
+    img {
+      -webkit-user-drag: none;
+      user-select: none;
+      display: block;
+      height: 2rem;
+    }
+  }
 
   .is-small-screen & {
     flex-wrap: nowrap;
