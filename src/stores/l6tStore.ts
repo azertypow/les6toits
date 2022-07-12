@@ -8,7 +8,10 @@ export const useL6tStore = defineStore({
     deviceClassName: "" as DeviceClassName,
     l6tData: {
       events: []
-    } as IL6tData
+    } as IL6tData,
+    l6tDataPresentation: {
+      introContent: ""
+    } as IL6tDataPresentation
   }),
   getters: {
   },
@@ -19,6 +22,10 @@ export const useL6tStore = defineStore({
 
 export interface IL6tData {
   events: IL6tEvent[]
+}
+
+export interface IL6tDataPresentation {
+  introContent: string
 }
 
 export type textHTML = string

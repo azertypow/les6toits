@@ -19,3 +19,9 @@ window.fetch('https://api.les6toits.ch/evenements', {
 }).then(async value => {
   useL6tStore().l6tData = await value.json()
 })
+
+window.fetch('https://api.les6toits.ch/presentation', {
+  method: 'GET',
+}).then(async value => {
+  useL6tStore().l6tDataPresentation = await value.json()
+})

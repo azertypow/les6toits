@@ -5,24 +5,10 @@
         id="presentation"
         class="v-view-home__intro l6t-g l6t-with_gutter"
     >
-      <div class="v-view-home__intro__text l6t-g-l__coll-3-6 l6t-with_gutter l6t-remove-child-margin" >
-        <p>
-          Un projet ambitieux au niveau architectural, un projet ambitieux en termes de collaboration artistique et un projet ancré au sein d’un quartier en plein développement.
-          Notre souhait : nous insérer dans une dynamique de quartier plurielle
-          et résolument tournée vers les arts, l’innovation, la culture, les rencontres
-          et l’artisanat : la HEAD, l’ensemble multi-activités Quartet, le développement du périmètre de la Concorde et du Centre Culturel de Châtelaine forment tout autant de viviers foisonnants dans lesquels s’inscrit ce projet.
-        </p>
-        <p style="text-align: center">
-          le Conservatoire populaire, <a href="#">l’Ensemble Contrechamps</a>, Eklekto et l’OCG
-        </p>
-        <p>
-          Le projet est une collaboration inédite de quatre structures musicales
-          et théâtrales : une école de musique et de théâtre (Conservatoire populaire), un ensemble contemporain spécialisé dans les projets immersifs (Ensemble Contrechamps), un ensemble de percussion réputé pour ses mises en scènes de concert (Eklekto) et un orchestre renommé pour ses productions scéniques originales (L’OCG).
-          Le lieu bénéficiera d’une atmosphère propice à l’échange, à la créativité
-          et la création, à l’émulation entre élèves et professionnels
-          et aux collaborations interdisciplinaires et interinstitutionnelles.
-        </p>
-      </div>
+      <div
+          v-html="l6tStore.l6tDataPresentation.introContent"
+          class="v-view-home__intro__text l6t-g-l__coll-3-6 l6t-with_gutter l6t-remove-child-margin"
+      ></div>
 
       <div class="v-view-home__intro__img l6t-g-l__coll-3-6 l6t-with_gutter" >
         <img
