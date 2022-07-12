@@ -10,11 +10,11 @@
     <div class="v-app-header__links-coll l6t-g-m__coll-2-6 l6t-with_gutter l6t-with_row">
       <div class="v-app-header__links-g l6t-g" >
         <div class="l6t-g-m__coll-3-6">
-          <a class="l6t-with_gutter" href="#presentation">Présentation</a>
-          <a class="l6t-with_gutter" href="#programme">Programme</a>
+          <router-link class="l6t-with_gutter" to="/#presentation">Présentation</router-link>
+          <router-link class="l6t-with_gutter" to="/#programme">Programme</router-link>
         </div>
         <div class="l6t-g-m__coll-3-6">
-          <a class="l6t-with_gutter" href="#infos">infos pratiques<br>& contacts</a>
+          <router-link class="l6t-with_gutter" to="#infos">infos pratiques<br>& contacts</router-link>
         </div>
       </div>
     </div>
