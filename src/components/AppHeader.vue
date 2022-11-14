@@ -14,7 +14,8 @@
           <router-link class="l6t-with_gutter" to="/#programme">Programme</router-link>
         </div>
         <div class="l6t-g-m__coll-3-6">
-          <router-link class="l6t-with_gutter" to="#infos">infos pratiques<br>& contacts</router-link>
+          <router-link class="l6t-with_gutter" to="#infos">infos pratiques</router-link>
+          <router-link class="l6t-with_gutter" to="/contact">contacter</router-link>
         </div>
       </div>
     </div>

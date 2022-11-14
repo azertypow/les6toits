@@ -79,3 +79,47 @@
     margin-bottom: 0 !important;
   }
 }
+
+button {
+  display: inline-block;
+  font-size: .8rem;
+  line-height: 1rem;
+  padding: .5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    width: calc( 100% / 6 * 4 );
+  }
+
+  label {
+    font-size: .8rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    width: 100%;
+  }
+
+  input {
+    font-size: .8rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid currentColor 1px;
+    background: none;
+    width: 100%;
+  }
+
+  label > input {
+    margin-top: 0;
+  }
+}
