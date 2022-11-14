@@ -10,37 +10,25 @@
       <div class="l6t-g l6t-g-l--direction-column l6t-g-l--space-between">
 
         <div class="l6t-g__coll-6-6 l6t-g-m__coll-3-6 l6t-g-l__coll-6-6">
-          <div class="l6t-g">
-            <div class="l6t-g__coll-6-6 l6t-g-m__coll-6-6 l6t-g-l__coll-6-6" >
-              <div class="l6t-g">
-                <div class="l6t-g__coll-3-6 l6t-g-m__coll-6-6 l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
-                  <p>Les 6 toits
-                    <br>Avenue de Châtelaine 43,
-                    <br>1201 Genève, Suisse
-                  </p>
-                  <p>
-                    Arrêt de bus :
-                    <br>Les Ouches 6, 19, 22, 51
-                  </p>
-                </div>
-                <div class="v-app-footer__time l6t-g__coll-6-6 l6t-g-m__coll-6-6 l6t-g-l__coll-3-6 l6t-no-margin l6t-with_gutter">
-                  <p>Horaires Instrumentarium
-                    <br>Lundi -&nbsp;mercredi&nbsp;: 11h&nbsp;-&nbsp;15h</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="l6t-g__coll-6-6 l6t-g-m__coll-3-6 l6t-g-l__coll-6-6">
           <div
-              class="v-app-footer__right__desc l6t-text--alternate l6t-with_gutter l6t-no-margin"
+              class="v-app-footer__right__desc l6t-text--alternate l6t-with_gutter l6t-no-margin l6t-remove-child-margin"
           >
-            Les 6 Toits ont reçu le soutien de la Ville de Genève,
-            de la Loterie Romande, de la Fondation Ernst Göhner
-            et d’une Fondation Genevoise.
-            La création de l’identité visuelle est réalisé
-            en partenariat avec la Head.
+            <p
+            >Les 6 toits
+              <br>Avenue de Châtelaine 43,
+              <br>1201 Genève, Suisse
+            </p>
+            <p
+            >Arrêt de bus :
+              <br>Les Ouches 6, 19, 22, 51
+            </p>
+            <p
+            >Horaires Instrumentarium
+              <br>Lundi -&nbsp;mercredi&nbsp;: 11h&nbsp;-&nbsp;15h
+            </p>
+            <p
+            >Les 6 Toits ont reçu le soutien de la Ville de Genève, de la Loterie Romande, de la Fondation Ernst Göhner et d’une Fondation Genevoise. La création de l’identité visuelle est réalisé en partenariat avec la Head.
+            </p>
           </div>
           <logo-list v-if="l6tStore.deviceClassName !== 'is-large-screen'" ></logo-list>
         </div>
