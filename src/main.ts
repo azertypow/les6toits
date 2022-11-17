@@ -29,3 +29,10 @@ window.fetch('https://api.les6toits.ch/presentation', {
 }).then(async value => {
   useL6tStore().l6tDataPresentation = await value.json()
 })
+
+window.fetch('https://api.les6toits.ch/pages', {
+  method: 'GET',
+}).then(async value => {
+  useL6tStore().l6tDataPages = await value.json()
+})
+

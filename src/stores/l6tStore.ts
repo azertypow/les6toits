@@ -10,8 +10,10 @@ export const useL6tStore = defineStore({
       events: []
     } as IL6tData,
     l6tDataPresentation: {
-      introContent: ""
-    } as IL6tDataPresentation
+      introContent: "",
+      infopratiques: "",
+    } as IL6tDataPresentation,
+    l6tDataPages: {} as IL6tDataPages,
   }),
   getters: {
   },
@@ -26,6 +28,14 @@ export interface IL6tData {
 
 export interface IL6tDataPresentation {
   introContent: string
+  infopratiques: string
+}
+
+export interface IL6tDataPages {
+  [key: string] : {
+    "text": string | null,
+    "image": IL6tImage | null
+  }[]
 }
 
 export type textHTML = string

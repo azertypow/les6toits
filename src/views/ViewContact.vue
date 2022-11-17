@@ -83,7 +83,7 @@ export default defineComponent({
   computed: {
     sendMessageData() {
       this.isSending = true
-      router.push('/')
+      router.push('/contact')
     },
   },
 
