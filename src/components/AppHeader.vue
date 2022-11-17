@@ -1,5 +1,5 @@
 <template>
-  <header class="v-app-header l6t-g l6t-with_gutter l6t-with_row">
+  <header class="v-app-header l6t-g l6t-with_gutter l6t-with_row" v-if="deviceClassName !== 'is-small-screen'">
     <router-link
         to="/"
         class="v-app-header__logo l6t-g-m__coll-1-6 l6t-with_gutter l6t-with_row"
@@ -19,14 +19,62 @@
         </div>
       </div>
     </div>
+    <div
+        class="v-app-header__other-pages-link l6t-with_row"
+    >
+      <router-link class="l6t-with_gutter" to="/other">other</router-link>
+      <router-link class="l6t-with_gutter" to="/other">other</router-link>
+      <router-link class="l6t-with_gutter" to="/other">other</router-link>
+      <router-link class="l6t-with_gutter" to="/other">other page sample</router-link>
+    </div>
+  </header>
+
+  <header
+      v-if="deviceClassName === 'is-small-screen'"
+      class="v-app-header l6t-g l6t-with_gutter l6t-with_row"
+  >
+    <router-link
+        to="/"
+        class="v-app-header__logo l6t-g-m__coll-1-6 l6t-with_gutter l6t-with_row"
+    >
+      <img src="../assets/L6T-logo.svg" alt="logo les6toits" draggable="false">
+    </router-link>
+
+    <div
+        class="v-app-header__links-coll l6t-with_row"
+    >
+      <router-link class="l6t-with_gutter" to="/#presentation">Présentation</router-link>
+      <router-link class="l6t-with_gutter" to="/#programme">Programme</router-link>
+      <router-link class="l6t-with_gutter" to="#infos">infos pratiques</router-link>
+      <router-link class="l6t-with_gutter" to="/contact">contacter</router-link>
+
+      <router-link class="l6t-with_gutter" to="/other">other</router-link>
+      <router-link class="l6t-with_gutter" to="/other">other</router-link>
+      <router-link class="l6t-with_gutter" to="/other">other</router-link>
+      <router-link class="l6t-with_gutter" to="/other">other page sample</router-link>
+    </div>
   </header>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue"
+import {useL6tStore} from "@/stores/l6tStore";
+import type {DeviceClassName} from "@/scripts/setDeviceClassName";
 
 export default defineComponent({
-})</script>
+  data() {
+    return {
+      l6tStore: useL6tStore()
+    }
+  },
+
+  computed: {
+    deviceClassName(): DeviceClassName {
+      return this.l6tStore.deviceClassName
+    }
+  }
+})
+</script>
 
 <style lang="scss">
 .v-app-header {
@@ -55,6 +103,20 @@ export default defineComponent({
     }
   }
 
+  .v-app-header__other-pages-link {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+    .is-medium-screen & {
+      justify-content: right;
+    }
+    .is-small-screen & {
+      width: 100%;
+      justify-content: right;
+    }
+  }
+
   .is-small-screen & {
     flex-wrap: nowrap;
 
@@ -65,6 +127,13 @@ export default defineComponent({
 
     .v-app-header__links-coll {
       width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      > * {
+        white-space: nowrap;
+      }
     }
 
     .v-app-header__links-g {
