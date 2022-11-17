@@ -88,12 +88,10 @@ button {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
 
   > * {
-    width: calc( 100% / 6 * 4 );
+    display: block;
   }
 
   label {
@@ -103,13 +101,14 @@ form {
     margin-bottom: 1rem;
     font-weight: 400;
     width: 100%;
+    box-sizing: border-box;
   }
 
   input {
     font-size: .8rem;
     line-height: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-weight: 400;
     border-top: none;
     border-right: none;
@@ -117,9 +116,59 @@ form {
     border-bottom: solid currentColor 1px;
     background: none;
     width: 100%;
+    box-sizing: border-box;
+    padding: var(--l6t-gutter-half);
+    transition: background-color .25s ease-in-out;
+
+    &:focus-visible {
+      outline: none;
+      background: rgba(0, 0, 0, .05);
+    }
   }
 
   label > input {
     margin-top: 0;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    resize: none;
+    border: none;
+    border-bottom: solid currentColor 1px;
+    padding: var(--l6t-gutter-half);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    transition: background-color .25s ease-in-out;
+
+    &:focus-visible {
+      outline: none;
+      background: rgba(0, 0, 0, .05);
+    }
+  }
+
+  button {
+    background: transparent;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid currentColor 1px;
+    margin-top: 2rem;
+    user-select: none;
+    cursor: pointer;
+
+    &.with-img {
+      border: none;
+
+      > img {
+        pointer-events: none;
+        display: block;
+        height: 1.5rem;
+        margin: auto;
+      }
+    }
   }
 }
