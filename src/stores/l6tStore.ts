@@ -33,8 +33,11 @@ export interface IL6tDataPresentation {
 
 export interface IL6tDataPages {
   [key: string] : {
-    "text": string | null,
-    "image": IL6tImage | null
+    "title": string,
+    content: {
+      "text": string | null,
+      "image": IL6tImage | null
+    }[]
   }[]
 }
 

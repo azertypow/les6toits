@@ -22,10 +22,11 @@
     <div
         class="v-app-header__other-pages-link l6t-with_row"
     >
-      <router-link class="l6t-with_gutter" to="/other">other</router-link>
-      <router-link class="l6t-with_gutter" to="/other">other</router-link>
-      <router-link class="l6t-with_gutter" to="/other">other</router-link>
-      <router-link class="l6t-with_gutter" to="/other">other page sample</router-link>
+      <router-link
+          v-for="(pageLinkValue, pageLinkKey) of l6tStore.l6tDataPages"
+          class="l6t-with_gutter"
+          :to="'/' + pageLinkKey"
+      >{{pageLinkValue.title}}</router-link>
     </div>
   </header>
 
@@ -48,10 +49,11 @@
       <router-link class="l6t-with_gutter" to="#infos">infos pratiques</router-link>
       <router-link class="l6t-with_gutter" to="/contact">contacter</router-link>
 
-      <router-link class="l6t-with_gutter" to="/other">other</router-link>
-      <router-link class="l6t-with_gutter" to="/other">other</router-link>
-      <router-link class="l6t-with_gutter" to="/other">other</router-link>
-      <router-link class="l6t-with_gutter" to="/other">other page sample</router-link>
+      <router-link
+          v-for="(pageLinkValue, pageLinkKey) of l6tStore.l6tDataPages"
+          class="l6t-with_gutter"
+          :to="'/' + pageLinkKey"
+      >{{pageLinkValue.title}}</router-link>
     </div>
   </header>
 </template>

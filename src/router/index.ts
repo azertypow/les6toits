@@ -20,6 +20,11 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ViewContact.vue')
     },
+    {
+      path: '/pages/:uid',
+      name: 'pages/:uid',
+      component: () => import('../views/DefaultPage.vue')
+    },
   ]
 })
 
