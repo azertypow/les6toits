@@ -6,12 +6,12 @@
       <div
         class="l6t-with_gutter"
       >
-        <h1>{{l6tStore.l6tDataPages['pages/'+$route.params.uid].title}}</h1>
+        <h1>{{currentPageData.title}}</h1>
       </div>
     </div>
     <section
         class="v-default-page__intro l6t-g l6t-with_gutter"
-        v-for="content of l6tStore.l6tDataPages['pages/'+$route.params.uid].content"
+        v-for="content of currentPageData.content"
         :class="{
           'has-just-image': content.text === null,
         }"
@@ -39,6 +39,7 @@
 <script lang="ts">
 import {defineComponent} from 'vue';
 import {useL6tStore} from "@/stores/l6tStore";
+import type {IL6tDataPage} from "@/stores/l6tStore";
 
 export default defineComponent({
   name: 'DefaultPage',
@@ -46,10 +47,15 @@ export default defineComponent({
 
   data() {
     return {
-      l6tStore: useL6tStore()
+      l6tStore: useL6tStore(),
     }
-  }
+  },
 
+  computed: {
+    currentPageData(): IL6tDataPage {
+      return this.l6tStore.l6tDataPages['pages/'+this.$route.params.uid]
+    }
+  },
 });
 </script>
 

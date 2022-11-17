@@ -57,7 +57,10 @@
           <div
               class="l6t-with_gutter"
           >
-            <button class="with-img" @click.prevent="sendMessageData"><img alt="envoyer" src="../assets/button/button--export.svg"></button>
+            <button
+                class="with-img"
+                @click.prevent="sendMessageData"
+            ><img alt="envoyer" src="../assets/button/button--export.svg"></button>
           </div>
         </form>
       </div>
@@ -79,8 +82,7 @@ export default defineComponent({
     }
   },
 
-
-  computed: {
+  methods: {
     sendMessageData() {
       this.isSending = true
       router.push('/contact')
