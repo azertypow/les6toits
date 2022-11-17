@@ -4,7 +4,11 @@
       :class="l6tStore.deviceClassName"
   >
     <app-header></app-header>
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
     <app-footer></app-footer>
   </main>
 </template>
