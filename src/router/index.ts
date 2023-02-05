@@ -5,7 +5,6 @@ const router = createRouter({
 
   scrollBehavior(to, from, savedPosition){
     if (savedPosition) return savedPosition
-    if (to.hash) return { top: 80, el: to.hash, behavior: 'smooth'}
     return { top: 0, behavior: 'smooth'}
   },
 
@@ -26,6 +25,15 @@ const router = createRouter({
       component: () => import('../views/DefaultPage.vue')
     },
   ]
+})
+
+router.afterEach((to, from, failure) => {
+
+  window.setTimeout(() => {
+    window.scrollTo({
+      top: (document.querySelector(to.hash) as HTMLElement).offsetTop - 80,
+    })
+  }, 1500)
 })
 
 export default router
