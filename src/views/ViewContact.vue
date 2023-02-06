@@ -119,39 +119,39 @@ export default defineComponent({
       contactUrl.searchParams.append('email',     this.email)
       contactUrl.searchParams.append('message',   this.message)
 
-      // try {
-      //   const response = await fetch(
-      //       contactUrl.href,
-      //       {
-      //         method: 'POST',
-      //       }
-      //   )
-      //
-      //   const jsonResponse = await response.json()
-      //
-      //   window.setTimeout(() => {
-      //
-      //     if(jsonResponse.succes === false) {
-      //       this.responseMassage  = 'Problème(s):'
-      //           + '-' + 'email: ' + jsonResponse.alert.email
-      //           + '-' + 'message: ' + jsonResponse.alert.message
-      //           + '-' + 'name: ' + jsonResponse.alert.name
-      //       this.status           = 'sending ERROR'
-      //
-      //     } else {
-      //       this.responseMassage = "Merci de nous avoir contacté, nous mettons tout en œuvre pour vous répondre au plus vite."
-      //       this.status           = 'sending OK'
-      //     }
-      //
-      //   }, 2500)
-      //
-      //
-      // } catch {
-      //   window.setTimeout(() => {
-      //     this.responseMassage  = 'Erreur de connection, réesséyez…'
-      //     this.status           = 'sending ERROR'
-      //   }, 2500)
-      // }
+      try {
+        const response = await fetch(
+            contactUrl.href,
+            {
+              method: 'POST',
+            }
+        )
+
+        const jsonResponse = await response.json()
+
+        window.setTimeout(() => {
+
+          if(jsonResponse.succes === false) {
+            this.responseMassage  = 'Problème(s):'
+                + '-' + 'email: ' + jsonResponse.alert.email
+                + '-' + 'message: ' + jsonResponse.alert.message
+                + '-' + 'name: ' + jsonResponse.alert.name
+            this.status           = 'sending ERROR'
+
+          } else {
+            this.responseMassage = "Merci de nous avoir contacté, nous mettons tout en œuvre pour vous répondre au plus vite."
+            this.status           = 'sending OK'
+          }
+
+        }, 2500)
+
+
+      } catch {
+        window.setTimeout(() => {
+          this.responseMassage  = 'Erreur de connection, réesséyez…'
+          this.status           = 'sending ERROR'
+        }, 2500)
+      }
 
     },
   },
