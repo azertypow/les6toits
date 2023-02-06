@@ -112,9 +112,22 @@ export default defineComponent({
             }
         )
 
+        const jsonResponse = await response.json()
+
         window.setTimeout(() => {
-          this.responseMassage = "Merci de nous avoir contacté, nous mettons tout en œuvre pour vous répondre au plus vite."
-          this.status           = 'sending OK'
+
+          if(jsonResponse.succes === false) {
+            this.responseMassage  = 'Problème(s):'
+                + '-' + 'email: ' + jsonResponse.alert.email
+                + '-' + 'message: ' + jsonResponse.alert.message
+                + '-' + 'name: ' + jsonResponse.alert.name
+            this.status           = 'sending ERROR'
+
+          } else {
+            this.responseMassage = "Merci de nous avoir contacté, nous mettons tout en œuvre pour vous répondre au plus vite."
+            this.status           = 'sending OK'
+          }
+
         }, 2500)
 
 
