@@ -6,7 +6,7 @@
       <div class="l6t-g__coll-6-6 l6t-g-m__coll-4-6 l6t-g-l__coll-4-6 l6t-with_gutter" >
         <div class="l6t-with_gutter">
           <template
-              v-if="!isSending"
+              v-if="status === 'empty'"
           >
             <h1>Nous contacter</h1>
             <p>Envoyez-nous un message, et nous vous répondrons au plus&nbsp;vite.</p>
@@ -14,8 +14,10 @@
           <template
               v-else
           >
-            <h1>Message envoyé!</h1>
-            <p>Merci de nous avoir contacté, nous mettons tout en œuvre pour vous répondre au plus vite.</p>
+            <h1 v-if="status === 'sending PROGRESS'">Message en cours d'envoi…</h1>
+            <h1 v-if="status === 'sending OK'">Message envoyé!</h1>
+            <h1 v-if="status === 'sending ERROR'">Oups.</h1>
+            <p>{{responseMassage}}</p>
           </template>
         </div>
       </div>
@@ -23,34 +25,34 @@
       <div class="l6t-g-m__coll-1-6 l6t-g-l__coll-1-6"></div>
       <div
           class="l6t-g__coll-6-6 l6t-g-m__coll-4-6 l6t-g-l__coll-4-6 l6t-with_gutter"
-          v-if="!isSending"
+          v-if="status === 'empty' || status === 'sending ERROR'"
       >
         <form>
           <div class="l6t-with_gutter">
             <label
             >nom
-              <br><input required type="text">
+              <br><input required type="text" v-model="name">
             </label>
           </div>
 
           <div class="l6t-with_gutter">
             <label
             >prénom
-              <br><input required type="text">
+              <br><input required type="text" v-model="firstname">
             </label>
           </div>
 
           <div class="l6t-with_gutter">
             <label
             >adresse mail
-              <br><input required type="text">
+              <br><input required type="email" v-model="email">
             </label>
           </div>
 
           <div class="l6t-with_gutter">
             <label
             >message
-              <br><textarea rows="10"></textarea>
+              <br><textarea rows="10" v-model="message"></textarea>
             </label>
           </div>
 
@@ -78,14 +80,51 @@ export default defineComponent({
 
   data() {
     return {
-      isSending: false,
+      firstname: '',
+      name: '',
+      email: '',
+      message: '',
+      status: 'empty' as 'sending PROGRESS' | 'empty' | 'sending OK' | 'sending ERROR',
+      responseMassage: '',
     }
   },
 
   methods: {
-    sendMessageData() {
-      this.isSending = true
-      router.push('/contact')
+    async sendMessageData(e: Event) {
+      e.preventDefault()
+      this.status = "sending PROGRESS"
+      this.responseMassage  = ''
+
+      router.push('/contact').then()
+
+      const contactUrl = new URL('https://api.les6toits.ch/contact?')
+
+      contactUrl.searchParams.append('firstname', this.firstname)
+      contactUrl.searchParams.append('name',      this.name)
+      contactUrl.searchParams.append('email',     this.email)
+      contactUrl.searchParams.append('message',   this.message)
+
+      try {
+        const response = await fetch(
+            contactUrl.href,
+            {
+              method: 'POST',
+            }
+        )
+
+        window.setTimeout(() => {
+          this.responseMassage = "Merci de nous avoir contacté, nous mettons tout en œuvre pour vous répondre au plus vite."
+          this.status           = 'sending OK'
+        }, 2500)
+
+
+      } catch {
+        window.setTimeout(() => {
+          this.responseMassage  = 'Erreur de connection, réesséyez…'
+          this.status           = 'sending ERROR'
+        }, 2500)
+      }
+
     },
   },
 
