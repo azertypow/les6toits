@@ -5,7 +5,7 @@ const router = createRouter({
 
   scrollBehavior(to, from, savedPosition){
     if (savedPosition) return savedPosition
-    return { top: 0, behavior: 'smooth'}
+    return { top: 0, behavior: undefined}
   },
 
   routes: [
@@ -30,10 +30,13 @@ const router = createRouter({
 router.afterEach((to, from, failure) => {
 
   window.setTimeout(() => {
+    const elementToScroll = document.querySelector(to.hash)
+    if( !(elementToScroll instanceof HTMLElement) ) return
     window.scrollTo({
-      top: (document.querySelector(to.hash) as HTMLElement).offsetTop - 80,
+      top: (elementToScroll.offsetTop - 80),
+      behavior: 'smooth',
     })
-  }, 1500)
+  }, 1000)
 })
 
 export default router
