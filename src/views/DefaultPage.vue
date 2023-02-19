@@ -39,11 +39,14 @@
 
       <div
           v-if="getPDFInArrayFilesOfContent(Object.values(content.image) ).length > 0"
+          class="v-default-page__pdf-list"
       >
         <a
             v-for="file of getPDFInArrayFilesOfContent(Object.values(content.image))"
             :href="file.originalUrl"
-        >{{file.originalUrl}}</a>
+            target="_blank"
+            class="v-default-page__pdf-list__item"
+        >{{file.alt}}</a>
       </div>
     </section>
 
@@ -122,6 +125,23 @@ export default defineComponent({
 
     .v-default-page__cover {
       max-height: calc( 100vh - var(--l6t-app-header-height) - 1rem );
+    }
+  }
+
+  .v-default-page__pdf-list {
+    display: flex;
+    margin-top: 1rem;
+
+    .v-default-page__pdf-list__item {
+      display: block;
+      line-height: 1rem;
+      padding: 1rem;
+      box-sizing: border-box;
+      border: solid 1px;
+      text-decoration: none;
+      border-radius: 1rem;
+      margin-left: .5rem;
+      margin-right: .5rem;
     }
   }
 }

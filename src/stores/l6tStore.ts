@@ -58,6 +58,7 @@ export interface IL6tEvent {
 }
 
 export interface IL6tImage {
+  alt: string | null
   originalUrl: string
   largeUrl: string
   mediumUrl: string
