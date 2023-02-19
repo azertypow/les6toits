@@ -6,7 +6,7 @@
         'is-eklekto'      : l6tEvent.tags.split(',')[0] === 'eklekto',
         'is-contrechamps' : l6tEvent.tags.split(',')[0] === 'contrechamps',
         'is-conservatoire' : l6tEvent.tags.split(',')[0] === 'conservatoire',
-        'is-empty-tag'    : l6tEvent.tags.split(',')[0] === '',
+        'is-empty-tag'    : l6tEvent.tags.split(',')[0] === '' | l6tEvent.tags.split(',')[0] === 'invités',
       }"
   >
 
