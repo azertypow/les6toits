@@ -26,7 +26,7 @@
           class="v-default-page__intro__img l6t-g-l__coll-3-6 l6t-with_gutter"
       >
         <template
-            v-for="file of content.image"
+            v-for="file of Object.values( content.image )"
         >
           <img
               v-if="(/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i).test(file.originalUrl)"
