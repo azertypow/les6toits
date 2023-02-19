@@ -42,6 +42,7 @@
         <img v-else-if="l6tEvent.tags.split(',')[0] === 'contrechamps'"   src="../assets/tags/contrechamps.svg" alt="contrechamps" style="height: 1.5rem" />
         <img v-else-if="l6tEvent.tags.split(',')[0] === 'eklekto'"        src="../assets/tags/eklekto.svg" alt="eklekto" style="height: 1.5rem" />
         <img v-else-if="l6tEvent.tags.split(',')[0] === 'orchestre'"      src="../assets/tags/OCG.svg" alt="OCG" style="height: 3rem" />
+        <img v-else-if="l6tEvent.tags.split(',')[0] === 'invités'"      src="../assets/tags/invitees.svg" alt="invités" style="height: 1.5rem" />
       </div>
       <div class="v-event__header__title">
         <h1

@@ -35,7 +35,7 @@ export interface IL6tDataPage {
   "title": string,
   content: {
     "text": string | null,
-    "image": IL6tImage | null
+    "image": { (key: string): IL6tImage }
   }[]
 }
 
@@ -43,7 +43,7 @@ export type textHTML = string
 
 export interface IL6tEvent {
   dates:        l6tDate[]
-  tags:            "contrechamps" | "conservatoire" | "orchestre" | "eklekto"
+  tags:            "contrechamps" | "conservatoire" | "orchestre" | "eklekto" | "invités"
   imageCoverURL?:  IL6tImage
   title?:          string
   subtitle?:      string

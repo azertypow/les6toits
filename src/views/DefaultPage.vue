@@ -23,14 +23,27 @@
       ></div>
 
       <div
-          v-if="content.image"
           class="v-default-page__intro__img l6t-g-l__coll-3-6 l6t-with_gutter"
       >
-        <img
-            class="v-default-page__cover l6t-img"
-            :src="content.image.largeUrl"
-            alt="image header"
+        <template
+            v-for="file of content.image"
         >
+          <img
+              v-if="(/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i).test(file.originalUrl)"
+              class="v-default-page__cover l6t-img"
+              :src="file.largeUrl"
+              alt="image header"
+          >
+        </template>
+      </div>
+
+      <div
+          v-if="getPDFInArrayFilesOfContent(Object.values(content.image) ).length > 0"
+      >
+        <a
+            v-for="file of getPDFInArrayFilesOfContent(Object.values(content.image))"
+            :href="file.originalUrl"
+        >{{file.originalUrl}}</a>
       </div>
     </section>
 
@@ -42,7 +55,7 @@
 <script lang="ts">
 import {defineComponent} from 'vue';
 import {useL6tStore} from "@/stores/l6tStore";
-import type {IL6tDataPage} from "@/stores/l6tStore";
+import type {IL6tDataPage, IL6tImage} from "@/stores/l6tStore";
 import AppFooter from "@/components/AppFooter.vue"
 
 export default defineComponent({
@@ -58,6 +71,14 @@ export default defineComponent({
   computed: {
     currentPageData(): IL6tDataPage {
       return this.l6tStore.l6tDataPages['pages/'+this.$route.params.uid]
+    }
+  },
+
+  methods: {
+    getPDFInArrayFilesOfContent(filesOfContent: IL6tImage[]): IL6tImage[] {
+      return filesOfContent.filter(value => {
+        return (/\.(pdf)$/i).test(value.originalUrl)
+      })
     }
   },
 });
