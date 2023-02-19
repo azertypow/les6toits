@@ -67,16 +67,19 @@
         </form>
       </div>
     </div>
+
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from 'vue';
 import router from "@/router";
+import AppFooter from "@/components/AppFooter.vue"
 
 export default defineComponent({
   name: 'ViewContact',
-  components: {},
+  components: {AppFooter},
 
   data() {
     return {

@@ -9,20 +9,17 @@
         <component :is="Component" :key="route.path" />
       </transition>
     </router-view>
-    <app-footer></app-footer>
   </main>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue"
 import AppHeader from "@/components/AppHeader.vue"
-import AppFooter from "@/components/AppFooter.vue"
-import type {DeviceClassName} from "@/scripts/setDeviceClassName"
 import {setDeviceClassName} from "@/scripts/setDeviceClassName"
 import {useL6tStore} from "@/stores/l6tStore"
 
 export default defineComponent({
-  components: {AppFooter, AppHeader},
+  components: {AppHeader},
 
   data() {
     return {

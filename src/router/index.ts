@@ -3,11 +3,6 @@ import {createRouter, createWebHashHistory} from 'vue-router'
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
 
-  scrollBehavior(to, from, savedPosition){
-    if (savedPosition) return savedPosition
-    return { top: 0, behavior: undefined}
-  },
-
   routes: [
     {
       path: '/',
@@ -27,7 +22,27 @@ const router = createRouter({
   ]
 })
 
+router.beforeEach((to, from, next) => {
+
+  if(from.name === to.name) {
+    next()
+  } else {
+    window.scrollTo({
+      top: (0),
+      behavior: 'smooth',
+    })
+    window.setTimeout(() => {
+      next()
+    }, 250)
+  }
+
+
+})
+
 router.afterEach((to, from, failure) => {
+
+  if(! to.hash) return
+  const timingForScrollBehavior = from.name === to.name ? 0 : 1500
 
   window.setTimeout(() => {
     const elementToScroll = document.querySelector(to.hash)
@@ -36,7 +51,7 @@ router.afterEach((to, from, failure) => {
       top: (elementToScroll.offsetTop - 80),
       behavior: 'smooth',
     })
-  }, 1000)
+  }, timingForScrollBehavior)
 })
 
 export default router

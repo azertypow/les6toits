@@ -33,6 +33,9 @@
         >
       </div>
     </section>
+
+    <app-footer></app-footer>
+
   </div>
 </template>
 
@@ -40,10 +43,11 @@
 import {defineComponent} from 'vue';
 import {useL6tStore} from "@/stores/l6tStore";
 import type {IL6tDataPage} from "@/stores/l6tStore";
+import AppFooter from "@/components/AppFooter.vue"
 
 export default defineComponent({
   name: 'DefaultPage',
-  components: {},
+  components: {AppFooter},
 
   data() {
     return {

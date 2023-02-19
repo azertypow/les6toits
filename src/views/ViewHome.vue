@@ -51,6 +51,7 @@
       </div>
 
     </section>
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -59,9 +60,10 @@ import {defineComponent} from "vue"
 import type {IL6tEvent} from "@/stores/l6tStore"
 import {useL6tStore} from "@/stores/l6tStore"
 import Event from "@/components/Event.vue"
+import AppFooter from "@/components/AppFooter.vue"
 
 export default defineComponent({
-  components: {Event},
+  components: {Event, AppFooter},
   data() {
     return {
       l6tStore: useL6tStore()
