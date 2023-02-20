@@ -5,7 +5,7 @@
           v-for="logo of useL6tStore().l6tDataPresentation.logos"
           class="l6t-with_gutter"
           :src="logo.mediumUrl"
-          :alt="logo.alt"
+          :alt="logo.alt || ''"
       >
     </div>
   </div>
