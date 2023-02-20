@@ -31,7 +31,7 @@
           <img
               v-if="(/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i).test(file.originalUrl)"
               class="v-default-page__cover l6t-img"
-              :src="file.largeUrl"
+              :src="file.mediumUrl"
               alt="image header"
           >
         </template>
