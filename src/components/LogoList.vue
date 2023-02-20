@@ -1,17 +1,23 @@
 <template>
   <div class="v-logo-list">
     <div class="l6t-g">
-      <img class="l6t-with_gutter" src="/public/logo/EGS_Schriftzug_2_schwarz-300x105.jpeg" alt="">
-      <img class="l6t-with_gutter" src="/public/logo/logo-avec-soutien-ville-geneve-positif.jpg" alt="">
-      <img class="l6t-with_gutter" src="/public/logo/LoRo-LogoBeneficiaires-NB-small.jpeg" alt="">
+      <img
+          v-for="logo of useL6tStore().l6tDataPresentation.logos"
+          class="l6t-with_gutter"
+          :src="logo.mediumUrl"
+          :alt="logo.alt"
+      >
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue"
+import {useL6tStore} from "@/stores/l6tStore";
 
-export default defineComponent({})
+export default defineComponent({
+  methods: {useL6tStore}
+})
 </script>
 
 <style lang="scss">

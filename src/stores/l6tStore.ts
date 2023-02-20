@@ -29,6 +29,7 @@ export interface IL6tData {
 export interface IL6tDataPresentation {
   introContent: string
   infopratiques: string
+  logos: {[key: string]: IL6tImage}
 }
 
 export interface IL6tDataPage {
