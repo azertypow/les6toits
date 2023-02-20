@@ -10,36 +10,38 @@
       </div>
     </div>
     <section
-        class="v-default-page__intro l6t-g l6t-with_gutter"
+        class="v-default-page__section l6t-g l6t-with_gutter"
         v-for="content of currentPageData.content"
         :class="{
           'has-just-image': content.text === null,
         }"
     >
-      <div
-          v-if="content.text"
-          v-html="content.text"
-          class="v-default-page__intro__text l6t-g-l__coll-3-6 l6t-with_gutter l6t-remove-child-margin"
-      ></div>
+      <div class="v-default-page__section__content l6t-g" >
+        <div
+            v-if="content.text"
+            v-html="content.text"
+            class="v-default-page__intro__text l6t-g-l__coll-3-6 l6t-with_gutter l6t-remove-child-margin"
+        ></div>
 
-      <div
-          class="v-default-page__intro__img l6t-g-l__coll-3-6 l6t-with_gutter"
-      >
-        <template
-            v-for="file of Object.values( content.image )"
+        <div
+            class="v-default-page__intro__img l6t-g-l__coll-3-6 l6t-with_gutter"
         >
-          <img
-              v-if="(/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i).test(file.originalUrl)"
-              class="v-default-page__cover l6t-img"
-              :src="file.mediumUrl"
-              alt="image header"
+          <template
+              v-for="file of Object.values( content.image )"
           >
-        </template>
+            <img
+                v-if="(/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i).test(file.originalUrl)"
+                class="v-default-page__cover l6t-img"
+                :src="file.mediumUrl"
+                alt="image header"
+            >
+          </template>
+        </div>
       </div>
 
       <div
           v-if="getPDFInArrayFilesOfContent(Object.values(content.image) ).length > 0"
-          class="v-default-page__pdf-list"
+          class="v-default-page__section__pdf-list"
       >
         <a
             v-for="file of getPDFInArrayFilesOfContent(Object.values(content.image))"
@@ -89,9 +91,11 @@ export default defineComponent({
 
 <style lang="scss" >
 .v-default-page {
-
-  .v-default-page__intro {
+  .v-default-page__section {
     margin-bottom: 1rem;
+  }
+
+  .v-default-page__section__content {
 
     &.has-just-image {
       > * {
@@ -115,7 +119,7 @@ export default defineComponent({
   .is-small-screen &,
   .is-medium-screen & {
 
-    .v-default-page__intro {
+    .v-default-page__section__content {
       flex-direction: column-reverse;
     }
 
@@ -128,7 +132,7 @@ export default defineComponent({
     }
   }
 
-  .v-default-page__pdf-list {
+  .v-default-page__section__pdf-list {
     display: flex;
     margin-top: 1rem;
 
