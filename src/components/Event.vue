@@ -138,6 +138,7 @@ export default defineComponent({
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    max-width: 25em;
 
     h1 {
       margin: 0;
