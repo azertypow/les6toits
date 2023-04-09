@@ -14,8 +14,8 @@
           <router-link class="l6t-with_gutter" to="/#programme">Programme</router-link>
         </div>
         <div class="l6t-g-m__coll-3-6">
-          <router-link class="l6t-with_gutter" to="#infos">infos pratiques</router-link>
-          <router-link class="l6t-with_gutter" to="/contact">contacter</router-link>
+          <router-link class="l6t-with_gutter" to="#infos">Infos pratiques</router-link>
+          <router-link class="l6t-with_gutter" to="/contact">Contacter</router-link>
         </div>
       </div>
     </div>
@@ -46,8 +46,8 @@
     >
       <router-link class="l6t-with_gutter" to="/#presentation">Présentation</router-link>
       <router-link class="l6t-with_gutter" to="/#programme">Programme</router-link>
-      <router-link class="l6t-with_gutter" to="#infos">infos pratiques</router-link>
-      <router-link class="l6t-with_gutter" to="/contact">contacter</router-link>
+      <router-link class="l6t-with_gutter" to="#infos">Infos pratiques</router-link>
+      <router-link class="l6t-with_gutter" to="/contact">Contacter</router-link>
 
       <router-link
           v-for="(pageLinkValue, pageLinkKey) of l6tStore.l6tDataPages"
