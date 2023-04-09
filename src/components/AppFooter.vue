@@ -109,6 +109,7 @@ export default defineComponent({
 
 <style lang="scss">
 .v-app-footer {
+  padding-top: 10rem;
   padding-bottom: 1rem;
 
   .v-app-footer__map {
