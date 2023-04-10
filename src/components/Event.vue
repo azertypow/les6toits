@@ -78,6 +78,13 @@
         ></div>
       </div>
 
+      <a
+          v-if="l6tEvent.linkCoverURL"
+          :href="l6tEvent.linkCoverURL"
+          target="_blank"
+          class="l6t-button"
+      >+ d'infos</a>
+
     </div>
 
   </section>
