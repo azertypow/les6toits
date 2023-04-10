@@ -46,6 +46,7 @@ export interface IL6tEvent {
   dates:        l6tDate[]
   tags:            "contrechamps" | "conservatoire" | "orchestre" | "eklekto" | "invités"
   imageCoverURL?:  IL6tImage
+  linkCoverURL?: string
   title?:          string
   subtitle?:      string
   textContent:    textHTML
