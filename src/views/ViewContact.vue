@@ -30,28 +30,28 @@
         <form>
           <div class="l6t-with_gutter">
             <label
-            >prénom
+            >Prénom
               <br><input required type="text" v-model="firstname">
             </label>
           </div>
 
           <div class="l6t-with_gutter">
             <label
-            >nom
+            >Nom
               <br><input required type="text" v-model="name">
             </label>
           </div>
 
           <div class="l6t-with_gutter">
             <label
-            >adresse mail
+            >Adresse mail
               <br><input required type="email" v-model="email">
             </label>
           </div>
 
           <div class="l6t-with_gutter">
             <label
-            >numéro de téléphone (format 0123456789)
+            >Numéro de téléphone avec indicatif du pays (+_ _ (0)123456789)
               <br><input type="tel" v-model="phone">
             </label>
           </div>
@@ -59,7 +59,7 @@
 
           <div class="l6t-with_gutter">
             <label
-            >message
+            >Message
               <br><textarea rows="10" v-model="message"></textarea>
             </label>
           </div>
