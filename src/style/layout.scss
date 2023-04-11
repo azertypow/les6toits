@@ -119,6 +119,7 @@ form {
     box-sizing: border-box;
     padding: var(--l6t-gutter-half);
     transition: background-color .25s ease-in-out;
+    border-radius: 0;
 
     &:focus-visible {
       outline: none;
