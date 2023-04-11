@@ -51,6 +51,14 @@
 
           <div class="l6t-with_gutter">
             <label
+            >numéro de téléphone (format 0123456789)
+              <br><input type="tel" v-model="phone">
+            </label>
+          </div>
+
+
+          <div class="l6t-with_gutter">
+            <label
             >message
               <br><textarea rows="10" v-model="message"></textarea>
             </label>
@@ -86,10 +94,17 @@ export default defineComponent({
       firstname: '',
       name: '',
       email: '',
+      phone: '',
       message: '',
       status: 'empty' as 'sending PROGRESS' | 'empty' | 'sending OK' | 'sending ERROR',
       responseMassage: '',
     }
+  },
+
+  watch: {
+    phone() {
+      this.phone = this.phone.trim().replace(/\s/g, '')
+    },
   },
 
   methods: {
@@ -97,7 +112,10 @@ export default defineComponent({
       this.status = "sending PROGRESS"
       this.responseMassage  = ''
 
-      router.push('/contact').then()
+      window.scroll({
+        top: 0,
+        behavior: "smooth",
+      })
 
       if(this.firstname.length < 3) {
         this.status           = 'sending ERROR'
@@ -114,12 +132,20 @@ export default defineComponent({
         this.responseMassage  = 'Adresse mail incorrecte'
         return
       }
+      if(
+          this.phone.length > 0 && this.phone.match(/[a-zA-Z]/g)
+      ) {
+        this.status           = 'sending ERROR'
+        this.responseMassage  = 'Un numéro de téléphone ne doit pas contenir de lettre'
+        return
+      }
 
       const contactUrl = new URL('https://api.les6toits.ch/contact?')
 
       contactUrl.searchParams.append('firstname', this.firstname)
       contactUrl.searchParams.append('name',      this.name)
       contactUrl.searchParams.append('email',     this.email)
+      contactUrl.searchParams.append('phone',     this.phone)
       contactUrl.searchParams.append('message',   this.message)
 
       try {
@@ -150,10 +176,8 @@ export default defineComponent({
 
 
       } catch {
-        window.setTimeout(() => {
           this.responseMassage  = 'Erreur de connection, réesséyez…'
           this.status           = 'sending ERROR'
-        }, 2500)
       }
 
     },
