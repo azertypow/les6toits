@@ -30,15 +30,15 @@
         <form>
           <div class="l6t-with_gutter">
             <label
-            >nom
-              <br><input required type="text" v-model="name">
+            >prénom
+              <br><input required type="text" v-model="firstname">
             </label>
           </div>
 
           <div class="l6t-with_gutter">
             <label
-            >prénom
-              <br><input required type="text" v-model="firstname">
+            >nom
+              <br><input required type="text" v-model="name">
             </label>
           </div>
 
