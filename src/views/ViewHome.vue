@@ -65,9 +65,9 @@
           class="v-view-home__event-item"
           v-for="l6tEvent of shortedArchivesLeft"
         >
-          <event
+          <archive-event
             :l6t-event="l6tEvent"
-          ></event>
+          ></archive-event>
         </div>
       </div>
 
@@ -78,9 +78,9 @@
           class="v-view-home__event-item"
           v-for="l6tEvent of shortedArchivesRight"
         >
-          <event
+          <archive-event
             :l6t-event="l6tEvent"
-          ></event>
+          ></archive-event>
         </div>
       </div>
     </section>
@@ -98,9 +98,10 @@ import type {IL6tEvent} from "@/stores/l6tStore"
 import {useL6tStore} from "@/stores/l6tStore"
 import Event from "@/components/Event.vue"
 import AppFooter from "@/components/AppFooter.vue"
+import ArchiveEvent from "@/components/ArchiveEvent.vue";
 
 export default defineComponent({
-  components: {Event, AppFooter},
+  components: {ArchiveEvent, Event, AppFooter},
   data() {
     return {
       l6tStore: useL6tStore()
