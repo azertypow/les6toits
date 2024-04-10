@@ -83,9 +83,9 @@
             class="v-view-home__event-item"
             v-for="l6tEvent of shortedArchivesLeft"
           >
-            <event
+            <archive-event
               :l6t-event="l6tEvent"
-            ></event>
+            ></archive-event>
           </div>
         </div>
         <div
@@ -95,9 +95,9 @@
             class="v-view-home__event-item"
             v-for="l6tEvent of shortedArchivesRight"
           >
-            <event
+            <archive-event
               :l6t-event="l6tEvent"
-            ></event>
+            ></archive-event>
           </div>
         </div>
 
@@ -110,9 +110,9 @@
             class="v-view-home__event-item"
             v-for="l6tEvent of l6tStore.l6tData.archives"
           >
-            <event
+            <archive-event
               :l6t-event="l6tEvent"
-            ></event>
+            ></archive-event>
           </div>
         </div>
       </template>
