@@ -23,32 +23,48 @@
         id="programme"
         class="l6t-g l6t-with_gutter"
     >
-
-      <div
-          class="l6t-g-l__coll-3-6 l6t-with_gutter"
-      >
+      <template v-if="l6tStore.deviceClassName === 'is-large-screen'">
         <div
-            class="v-view-home__event-item"
-            v-for="l6tEvent of shortedEventsLeft"
+            class="l6t-g-l__coll-3-6 l6t-with_gutter"
         >
-          <event
-              :l6t-event="l6tEvent"
-          ></event>
+          <div
+              class="v-view-home__event-item"
+              v-for="l6tEvent of shortedEventsLeft"
+          >
+            <event
+                :l6t-event="l6tEvent"
+            ></event>
+          </div>
         </div>
-      </div>
-
-      <div
-          class="l6t-g-l__coll-3-6 l6t-with_gutter"
-      >
         <div
-            class="v-view-home__event-item"
-            v-for="l6tEvent of shortedEventsRight"
+            class="l6t-g-l__coll-3-6 l6t-with_gutter"
         >
-          <event
-              :l6t-event="l6tEvent"
-          ></event>
+          <div
+              class="v-view-home__event-item"
+              v-for="l6tEvent of shortedEventsRight"
+          >
+            <event
+                :l6t-event="l6tEvent"
+            ></event>
+          </div>
         </div>
-      </div>
+
+      </template>
+      <template v-else>
+        <div
+          class="l6t-g-l__coll-3-6 l6t-with_gutter"
+        >
+          <div
+            class="v-view-home__event-item"
+            v-for="l6tEvent of l6tStore.l6tData.events"
+          >
+            <event
+              :l6t-event="l6tEvent"
+            ></event>
+          </div>
+        </div>
+      </template>
+
     </section>
 
     <h2 style="text-align: center; font-size: 3rem; line-height: 1em; margin-top: 1em; margin-bottom: 1em">Archives</h2>
@@ -58,31 +74,49 @@
       class="l6t-g l6t-with_gutter"
       style="justify-content: center"
     >
-      <div
-        class="l6t-g-m__coll-2-6 l6t-with_gutter"
-      >
-        <div
-          class="v-view-home__event-item"
-          v-for="l6tEvent of shortedArchivesLeft"
-        >
-          <archive-event
-            :l6t-event="l6tEvent"
-          ></archive-event>
-        </div>
-      </div>
 
-      <div
-        class="l6t-g-m__coll-2-6 l6t-with_gutter"
-      >
+      <template v-if="l6tStore.deviceClassName === 'is-large-screen' || l6tStore.deviceClassName === 'is-medium-screen'">
         <div
-          class="v-view-home__event-item"
-          v-for="l6tEvent of shortedArchivesRight"
+          class="l6t-g-m__coll-2-6 l6t-with_gutter"
         >
-          <archive-event
-            :l6t-event="l6tEvent"
-          ></archive-event>
+          <div
+            class="v-view-home__event-item"
+            v-for="l6tEvent of shortedArchivesLeft"
+          >
+            <event
+              :l6t-event="l6tEvent"
+            ></event>
+          </div>
         </div>
-      </div>
+        <div
+          class="l6t-g-m__coll-2-6 l6t-with_gutter"
+        >
+          <div
+            class="v-view-home__event-item"
+            v-for="l6tEvent of shortedArchivesRight"
+          >
+            <event
+              :l6t-event="l6tEvent"
+            ></event>
+          </div>
+        </div>
+
+      </template>
+      <template v-else>
+        <div
+          class="l6t-g-m__coll-2-6 l6t-with_gutter"
+        >
+          <div
+            class="v-view-home__event-item"
+            v-for="l6tEvent of l6tStore.l6tData.archives"
+          >
+            <event
+              :l6t-event="l6tEvent"
+            ></event>
+          </div>
+        </div>
+      </template>
+
     </section>
 
 
@@ -99,8 +133,10 @@ import {useL6tStore} from "@/stores/l6tStore"
 import Event from "@/components/Event.vue"
 import AppFooter from "@/components/AppFooter.vue"
 import ArchiveEvent from "@/components/ArchiveEvent.vue";
+import {storeToRefs} from "pinia";
 
 export default defineComponent({
+  methods: {storeToRefs},
   components: {ArchiveEvent, Event, AppFooter},
   data() {
     return {
