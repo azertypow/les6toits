@@ -7,7 +7,8 @@ export const useL6tStore = defineStore({
   state: () => ({
     deviceClassName: "" as DeviceClassName,
     l6tData: {
-      events: []
+      events: [],
+      archives: [],
     } as IL6tData,
     l6tDataPresentation: {
       introContent: "",
@@ -24,6 +25,7 @@ export const useL6tStore = defineStore({
 
 export interface IL6tData {
   events: IL6tEvent[]
+  archives: IL6tEvent[]
 }
 
 export interface IL6tDataPresentation {

@@ -29,7 +29,7 @@
       >
         <div
             class="v-view-home__event-item"
-            v-for="l6tEvent of shortedEventsEven"
+            v-for="l6tEvent of shortedEventsLeft"
         >
           <event
               :l6t-event="l6tEvent"
@@ -42,15 +42,52 @@
       >
         <div
             class="v-view-home__event-item"
-            v-for="l6tEvent of shortedEventsOdd"
+            v-for="l6tEvent of shortedEventsRight"
         >
           <event
               :l6t-event="l6tEvent"
           ></event>
         </div>
       </div>
-
     </section>
+
+    <h2 style="text-align: center; font-size: 3rem; line-height: 1em; margin-top: 1em; margin-bottom: 1em">Archives</h2>
+
+    <section
+      id="archive"
+      class="l6t-g l6t-with_gutter"
+      style="justify-content: center"
+    >
+      <div
+        class="l6t-g-m__coll-2-6 l6t-with_gutter"
+      >
+        <div
+          class="v-view-home__event-item"
+          v-for="l6tEvent of shortedArchivesLeft"
+        >
+          <event
+            :l6t-event="l6tEvent"
+          ></event>
+        </div>
+      </div>
+
+      <div
+        class="l6t-g-m__coll-2-6 l6t-with_gutter"
+      >
+        <div
+          class="v-view-home__event-item"
+          v-for="l6tEvent of shortedArchivesRight"
+        >
+          <event
+            :l6t-event="l6tEvent"
+          ></event>
+        </div>
+      </div>
+    </section>
+
+
+
+
     <app-footer></app-footer>
   </div>
 </template>
@@ -71,16 +108,27 @@ export default defineComponent({
   },
 
   computed: {
-    shortedEventsEven(): IL6tEvent[] {
+    shortedEventsLeft(): IL6tEvent[] {
       return this.l6tStore.l6tData.events.filter(
           (value, index) => { return index % 2 === 0}
       )
     },
-    shortedEventsOdd(): IL6tEvent[] {
+    shortedEventsRight(): IL6tEvent[] {
       return this.l6tStore.l6tData.events.filter(
           (value, index) => { return index % 2 !== 0}
       )
-    }
+    },
+
+    shortedArchivesLeft(): IL6tEvent[] {
+      return this.l6tStore.l6tData.archives.filter(
+        (value, index) => { return index % 2 === 0}
+      )
+    },
+    shortedArchivesRight(): IL6tEvent[] {
+      return this.l6tStore.l6tData.archives.filter(
+        (value, index) => { return index % 2 !== 0}
+      )
+    },
 
   }
 
